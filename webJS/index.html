@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejemplo JavaScript</title>
         <script src="js/script.js" defer></script>
+        <script src="../webJS/js/Ejercicio01.js"></script>
         <link rel="stylesheet" href="css_js/estilo_ejemplo.css">
     </head>
     <body>
@@ -16,47 +17,6 @@
             <h2>Hola, mundo</h2>
             <p>Este es un ejemplo de documento HTML con JavaScript.</p>
 
-            <div class="acciones">
-                <button onclick="sumar()">Sumar</button>
-                <button class="btn_resta" onclick="restar()">Restar</button>
-                <button onclick="dividir()">Dividir</button>
-                <button onclick="multiplicar()">Multiplicar</button>
-            </div>
-
-            <div class="calculadora">
-                <input type="text" id="mostrar" value="0" readonly>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><button class="btn_num" onclick="escribir('1')">1</button></td>
-                            <td><button class="btn_num" onclick="escribir('2')">2</button></td>
-                            <td><button class="btn_num" onclick="escribir('3')">3</button></td>
-                            <td><button class="btn_num" onclick="escribir('+')">+</button></td>
-                        </tr>
-                        <tr>
-                            <td><button class="btn_num" onclick="escribir('4')">4</button></td>
-                            <td><button class="btn_num" onclick="escribir('5')">5</button></td>
-                            <td><button class="btn_num" onclick="escribir('6')">6</button></td>
-                            <td><button class="btn_num" onclick="escribir('-')">-</button></td>
-                        </tr>
-                        <tr>
-                            <td><button class="btn_num" onclick="escribir('7')">7</button></td>
-                            <td><button class="btn_num" onclick="escribir('8')">8</button></td>
-                            <td><button class="btn_num" onclick="escribir('9')">9</button></td>
-                            <td><button class="btn_num" onclick="escribir('*')">*</button></td>
-                        </tr>
-                        <tr>
-                            <td><button class="btn_num" onclick="escribir('/')">/</button></td>
-                            <td><button class="btn_num" onclick="escribir('0')">0</button></td>
-                            <td><button class="btn_num" onclick="escribir('.')">.</button></td>
-                            <td><button class="btn_num" onclick="resolver()">=</button></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"><button class="btn_num btn_limpiar" onclick="borrar()">C</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </main>
 
         <footer>
