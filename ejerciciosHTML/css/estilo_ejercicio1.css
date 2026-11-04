@@ -5,7 +5,8 @@ img {
     margin-right: auto;
 }
 
-footer p{
+.f{
     border: 2px solid rgb(62, 27, 218);
     background-color: rgba(190, 190, 192, 0.5);
+    margin: 10px;
 }

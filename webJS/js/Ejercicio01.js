@@ -8,3 +8,13 @@ let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Agosto", "S
 for(i in meses){
     alert(meses[i])
 }
+
+var valores = [true, 5, false, "hola", "adios", 2];
+let max = 0
+for (i = 0; i < arr.length; i++) { 
+    if (max < arr[i]){ 
+        max = arr[i]; 
+    } 
+}
+alert(max)
+
