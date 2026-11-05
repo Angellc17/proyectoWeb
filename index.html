@@ -1,60 +1,92 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web de Ejemplo</title>
+        <link rel="stylesheet" href="css/estilo.css">
+        <script src="js/menu.js" defer></script>
+    </head>
+    <body class="sitio">
+        <header class="cabecera">
+            <h1>Esta es mi primera WEB</h1>
+            <nav class="menu" aria-label="Principal">
+                <a href="index.html" aria-current="page">Inicio</a>
+                <a href="html/horario.html">Horario</a>
+                <a href="html/formulario.html">Formulario</a>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">JS</button>
+                    <div class="submenu">
+                            <a href="html/inicio_js.html">Inicio JS</a>
+                            <a href="html/calculadora.html">Calculadora</a>
+                            <a href="html/juego.html">Piedra, papel o tijera</a>
+                    </div>
+                </div>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">Actividades complementarias</button>
+                    <div class="submenu">
+                            <a href="html/ejercicio1.html">Ejercicio 1</a>
+                            <a href="html/ejercicio2.html">Ejercicio 2</a>
+                            <a href="html/ejercicio3.html">Ejercicio 3</a>
+                            <a href="html/ejercicio4.html">Ejercicio 4</a>
+                            <a href="html/ejercicio5.html">Ejercicio 5</a>
+                            <a href="html/ejercicio6.html">Ejercicio 6</a>
+                            <a href="html/ejercicio7.html">Ejercicio 7</a>
+                            <a href="html/ejercicio8.html">Ejercicio 8</a>
+                            <a href="html/ejercicio9_pagina1.html">Ejercicio 9</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-	<head>
-		<title>Web de Ejemplo</title>
+        <main class="contenido">
+            <h2>Hola mundo!</h2>
+            <p>Esto es un párrafo</p>
+            <ul class="materias">
+                <li>Programación</li>
+                <li>BBDD</li>
+                <li>LLMM</li>
+                <li>Entornos</li>
+                <li>IPE</li>
+            </ul>
 
-		<link rel="stylesheet" href="css/estilo.css">
-	</head>
+            <h2>Imagen de Ejercicio</h2>
+            <figure class="figura">
+                <img src="img/imagen_inicio.png" alt="Imagen del ejercicio" width="1388" height="589">
+            </figure>
 
-	<header>
-		<h1>Esta es mi primera WEB</h1>
-		<nav class="menu">
-			<a class="INI" href="index.html"> Inicio</a>
-			<a class="horario" href="horario.html"> Horario</a>
-			<a href="formulario.html"> Formulario</a>
-			<div class="desplegable">
-				<a href="#">JS</a>
-				<div class="submenu">
-					<a href="webJS/index.html">Inicio JS</a>
-					<a href="webJS/calculadora.html">Calculadora</a>
-					<a href="webJS/juego.html">Piedra, papel o tijera</a>
-				</div>
-			</div>
-			<div class="desplegable">
-				<a href="#">Actividades complementarias</a>
-				<div class="submenu">
-					<a href="ejerciciosHTML/ejercicio1.html">Ejercicio 1</a>
-					<a href="ejerciciosHTML/ejercicio2.html">Ejercicio 2</a>
-					<a href="ejerciciosHTML/ejercicio3.html">Ejercicio 3</a>
-					<a href="ejerciciosHTML/ejercicio4.html">Ejercicio 4</a>
-					<a href="ejerciciosHTML/ejercicio5.html">Ejercicio 5</a>
-					<a href="ejerciciosHTML/ejercicio6.html">Ejercicio 6</a>
-					<a href="ejerciciosHTML/ejercicio7.html">Ejercicio 7</a>
-					<a href="ejerciciosHTML/ejercicio8.html">Ejercicio 8</a>
-					<a href="ejerciciosHTML/ejercicio9/pagina1.html">Ejercicio 9</a>
+            <h2>Secciones de la web</h2>
+            <ul class="indice">
+                <li>
+                    <a href="html/horario.html">
+                        <span class="titulo">Horario</span>
+                        <span class="detalle">Horario semanal de DAM1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/formulario.html">
+                        <span class="titulo">Formulario</span>
+                        <span class="detalle">Formulario con los distintos tipos de campo de HTML</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/inicio_js.html">
+                        <span class="titulo">JavaScript</span>
+                        <span class="detalle">Calculadora, piedra papel o tijera y otras prácticas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="html/ejercicio1.html">
+                        <span class="titulo">Actividades complementarias</span>
+                        <span class="detalle">Ejercicios 1 a 9 de HTML y CSS</span>
+                    </a>
+                </li>
+            </ul>
+        </main>
 
-				</div> 
-			</div>
-		</nav>
-	</header>
-	<body>
-		<h2>Hola mundo!</h2>
-		<p>esto es un párrafo</p>
-		<ul>
-			<li>Programación</li>
-			<li>BBDD</li>
-			<li>LLMM</li>
-			<li>Entornos</li>
-			<li>IPE</li>
-		</ul>
-		<h2>Imagen de Ejercicio</h2>
-		<img src="img/imagen.png" width="700" height="500">
-	</body>
-	<footer>
-		<p>CIFP Virgen de Gracia</p>
-		<p>
-			Contacto:
-			<a href="email">correodeprueba@gmail.com</a>
-		</p>
-	</footer>
+        <footer class="pie">
+            <p>CIFP Virgen de Gracia</p>
+            <p>Contacto: <a href="mailto:correodeprueba@gmail.com">correodeprueba@gmail.com</a></p>
+        </footer>
+    </body>
 </html>

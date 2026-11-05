@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo JavaScript</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+        <script src="../js/menu.js" defer></script>
+        <script src="../js/script.js" defer></script>
+        <script src="../js/ejercicio01.js" defer></script>
+    </head>
+    <body class="sitio">
+        <header class="cabecera">
+            <h1>Bienvenido a mi página web</h1>
+            <nav class="menu" aria-label="Principal">
+                <a href="../index.html">Inicio</a>
+                <a href="horario.html">Horario</a>
+                <a href="formulario.html">Formulario</a>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton activo" aria-expanded="false" aria-haspopup="true">JS</button>
+                    <div class="submenu">
+                            <a href="inicio_js.html" aria-current="page">Inicio JS</a>
+                            <a href="calculadora.html">Calculadora</a>
+                            <a href="juego.html">Piedra, papel o tijera</a>
+                    </div>
+                </div>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">Actividades complementarias</button>
+                    <div class="submenu">
+                            <a href="ejercicio1.html">Ejercicio 1</a>
+                            <a href="ejercicio2.html">Ejercicio 2</a>
+                            <a href="ejercicio3.html">Ejercicio 3</a>
+                            <a href="ejercicio4.html">Ejercicio 4</a>
+                            <a href="ejercicio5.html">Ejercicio 5</a>
+                            <a href="ejercicio6.html">Ejercicio 6</a>
+                            <a href="ejercicio7.html">Ejercicio 7</a>
+                            <a href="ejercicio8.html">Ejercicio 8</a>
+                            <a href="ejercicio9_pagina1.html">Ejercicio 9</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="contenido">
+            <h2>Hola, mundo</h2>
+            <p>Este es un ejemplo de documento HTML con JavaScript.</p>
+            <p>Abre la consola del navegador (F12) para ver la salida de <code>ejercicio01.js</code>.</p>
+
+            <section class="panel">
+                <h3>Operaciones con variables</h3>
+                <p>Los botones usan las variables <code>numero1</code> (10) y <code>numero2</code> (5) de <code>script.js</code>.</p>
+                <input type="text" id="mostrar" class="campo-resultado" value="0" readonly aria-label="Resultado">
+                <div class="fila-botones">
+                    <button type="button" class="boton" onclick="sumar()">Sumar 15</button>
+                    <button type="button" class="boton" onclick="restar()">Restar 10</button>
+                    <button type="button" class="boton" onclick="multiplicar()">Multiplicar por 10</button>
+                    <button type="button" class="boton" onclick="dividir()">Dividir entre 5</button>
+                    <button type="button" class="boton boton-secundario" onclick="borrar()">Borrar</button>
+                </div>
+            </section>
+
+            <h2>Otras prácticas</h2>
+            <ul class="indice">
+                <li>
+                    <a href="calculadora.html">
+                        <span class="titulo">Calculadora</span>
+                        <span class="detalle">Calculadora con las cuatro operaciones básicas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="juego.html">
+                        <span class="titulo">Piedra, papel o tijera</span>
+                        <span class="detalle">Juego contra la máquina con marcador de partidas</span>
+                    </a>
+                </li>
+            </ul>
+            <p style="margin-top: 1rem;">La actividad <code>js/mi_tienda.js</code> se ejecuta con Node.js: <code>node js/mi_tienda.js</code>.</p>
+        </main>
+
+        <footer class="pie">
+            <p>CIFP Virgen de Gracia</p>
+            <p>Contacto: <a href="mailto:correodeprueba@gmail.com">correodeprueba@gmail.com</a></p>
+        </footer>
+    </body>
+</html>

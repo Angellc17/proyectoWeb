@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+        <link rel="stylesheet" href="../css/formulario.css">
+        <script src="../js/menu.js" defer></script>
+    </head>
+    <body class="sitio">
+        <header class="cabecera">
+            <h1>Esta es mi primera WEB</h1>
+            <nav class="menu" aria-label="Principal">
+                <a href="../index.html">Inicio</a>
+                <a href="horario.html">Horario</a>
+                <a href="formulario.html" aria-current="page">Formulario</a>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">JS</button>
+                    <div class="submenu">
+                            <a href="inicio_js.html">Inicio JS</a>
+                            <a href="calculadora.html">Calculadora</a>
+                            <a href="juego.html">Piedra, papel o tijera</a>
+                    </div>
+                </div>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">Actividades complementarias</button>
+                    <div class="submenu">
+                            <a href="ejercicio1.html">Ejercicio 1</a>
+                            <a href="ejercicio2.html">Ejercicio 2</a>
+                            <a href="ejercicio3.html">Ejercicio 3</a>
+                            <a href="ejercicio4.html">Ejercicio 4</a>
+                            <a href="ejercicio5.html">Ejercicio 5</a>
+                            <a href="ejercicio6.html">Ejercicio 6</a>
+                            <a href="ejercicio7.html">Ejercicio 7</a>
+                            <a href="ejercicio8.html">Ejercicio 8</a>
+                            <a href="ejercicio9_pagina1.html">Ejercicio 9</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="contenido formulario">
+            <h2>Formulario de Contacto</h2>
+            <form>
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <!-- Nombre -->
+                    <p class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
+                    </p>
+                    <!-- Apellido -->
+                    <p class="campo">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" required>
+                    </p>
+                    <!-- Contraseña -->
+                    <p class="campo">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" name="contrasena" id="contrasena" placeholder="Escribe tu contraseña" required>
+                    </p>
+                    <!-- Correo -->
+                    <p class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" name="correo" id="correo" placeholder="Escribe tu correo" required>
+                    </p>
+                    <!-- Teléfono -->
+                    <p class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono" required>
+                    </p>
+                    <!-- Página web -->
+                    <p class="campo">
+                        <label for="web">Sitio web</label>
+                        <input type="url" name="web" id="web" placeholder="Escribe la URL de tu sitio web">
+                    </p>
+                    <!-- Buscar -->
+                    <p class="campo">
+                        <label for="buscar">Buscar</label>
+                        <input type="search" name="buscar" id="buscar">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Fechas y horas</legend>
+                    <!-- Fecha -->
+                    <p class="campo">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" name="fecha" id="fecha">
+                    </p>
+                    <!-- Hora -->
+                    <p class="campo">
+                        <label for="hora">Hora:</label>
+                        <input type="time" name="hora" id="hora">
+                    </p>
+                    <!-- Fecha y hora -->
+                    <p class="campo">
+                        <label for="fechaHora">Fecha y hora:</label>
+                        <input type="datetime-local" name="fechaHora" id="fechaHora">
+                    </p>
+                    <!-- Mes -->
+                    <p class="campo">
+                        <label for="mes">Mes:</label>
+                        <input type="month" name="mes" id="mes">
+                    </p>
+                    <!-- Semana -->
+                    <p class="campo">
+                        <label for="semana">Semana:</label>
+                        <input type="week" name="semana" id="semana">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Valores numéricos</legend>
+                    <!-- Edad -->
+                    <p class="campo">
+                        <label for="edad">Edad:</label>
+                        <input type="number" name="edad" id="edad" min="0" max="120" step="1">
+                    </p>
+                    <!-- Rango -->
+                    <p class="campo">
+                        <label for="valor">Nivel:</label>
+                        <input type="range" name="valor" id="valor" min="0" max="100">
+                    </p>
+                    <!-- Color -->
+                    <p class="campo">
+                        <label for="color">Color favorito</label>
+                        <input type="color" name="color" id="color">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Opciones</legend>
+                    <!-- Radio -->
+                    <p class="titulo-grupo">Selecciona una opción:</p>
+                    <div class="opcion">
+                        <input type="radio" name="opcion" id="opcion1" value="1">
+                        <label for="opcion1">Opción 1</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" name="opcion" id="opcion2" value="2">
+                        <label for="opcion2">Opción 2</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" name="opcion" id="opcion3" value="3">
+                        <label for="opcion3">Opción 3</label>
+                    </div>
+                    <!-- Checkbox -->
+                    <p class="titulo-grupo">Selecciona tus aficiones:</p>
+                    <div class="opcion">
+                        <input type="checkbox" name="aficiones" id="deporte" value="deporte">
+                        <label for="deporte">Deporte</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="checkbox" name="aficiones" id="musica" value="musica">
+                        <label for="musica">Música</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="checkbox" name="aficiones" id="informatica" value="informatica">
+                        <label for="informatica">Informática</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Listas</legend>
+                    <!-- Select -->
+                    <p class="campo">
+                        <label for="provincia">Provincia:</label>
+                        <select name="provincia" id="provincia">
+                            <option value="">Selecciona una provincia</option>
+                            <option value="cordoba">Córdoba</option>
+                            <option value="ciudad_real">Ciudad Real</option>
+                            <option value="toledo">Toledo</option>
+                            <option value="jaen">Jaén</option>
+                        </select>
+                    </p>
+                    <!-- Select con grupos -->
+                    <p class="campo">
+                        <label for="estudio">Estudios:</label>
+                        <select name="estudio" id="estudio">
+                            <optgroup label="Informática">
+                                <option value="dam">DAM</option>
+                                <option value="daw">DAW</option>
+                                <option value="asir">ASIR</option>
+                            </optgroup>
+                            <optgroup label="Electrónica">
+                                <option value="teleco">Sistemas de Telecomunicación</option>
+                                <option value="electronica">Electrónica</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <!-- Select múltiple -->
+                    <p class="campo">
+                        <label for="lenguajes">Lenguajes favoritos:</label>
+                        <select name="lenguajes" id="lenguajes" multiple size="4">
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="java">Java</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Texto</legend>
+                    <!-- Texto -->
+                    <p class="campo">
+                        <label for="comentarios">Comentarios:</label>
+                        <textarea name="comentarios" id="comentarios" rows="5" cols="40" placeholder="Escribe aquí"></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Otros elementos</legend>
+                    <!-- File -->
+                    <p class="campo">
+                        <label for="archivo">Selecciona un archivo:</label>
+                        <input type="file" name="archivo" id="archivo">
+                    </p>
+                    <!-- Datalist -->
+                    <p class="campo">
+                        <label for="navegador">Navegador favorito:</label>
+                        <input type="text" name="navegador" id="navegador" list="navegadores">
+                        <datalist id="navegadores">
+                            <option value="Chrome"></option>
+                            <option value="Firefox"></option>
+                            <option value="Edge"></option>
+                            <option value="Brave"></option>
+                        </datalist>
+                    </p>
+                    <!-- Hidden -->
+                    <input type="hidden" name="id_usuario" value="123">
+                </fieldset>
+
+                <fieldset class="botones">
+                    <legend>Botones</legend>
+                    <!-- Submit -->
+                    <input type="submit" class="boton" value="Enviar formulario">
+                    <!-- Reset -->
+                    <input type="reset" class="boton boton-secundario" value="Borrar formulario">
+                </fieldset>
+            </form>
+        </main>
+
+        <footer class="pie">
+            <p>CIFP Virgen de Gracia</p>
+            <p>Contacto: <a href="mailto:correodeprueba@gmail.com">correodeprueba@gmail.com</a></p>
+        </footer>
+    </body>
+</html>

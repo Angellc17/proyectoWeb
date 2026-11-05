@@ -1,0 +1,73 @@
+/* Calculadora */
+.calculadora {
+    width: min(100%, 20rem);
+    margin: 0 auto;
+    padding: 1rem;
+    background: var(--tinta);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(30, 29, 39, .25);
+}
+
+#pantalla {
+    width: 100%;
+    height: 4.5rem;
+    padding: 0 1rem;
+    font: 600 2rem ui-monospace, "SFMono-Regular", Consolas, monospace;
+    text-align: right;
+    color: #fff;
+    background: #14131b;
+    border: 0;
+    border-radius: 12px;
+}
+
+.teclas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    margin-top: .75rem;
+}
+
+.tecla {
+    height: 3.5rem;
+    font: inherit;
+    font-size: 1.25rem;
+    color: #fff;
+    background: #3a3955;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+.tecla:hover {
+    background: #4a4970;
+}
+
+.tecla:active {
+    transform: translateY(1px);
+}
+
+.tecla.op {
+    background: #55537f;
+}
+
+.tecla.op:hover {
+    background: #66649a;
+}
+
+.tecla.igual {
+    background: var(--acento);
+}
+
+.tecla.igual:hover {
+    background: #5470ee;
+}
+
+.tecla.borrar {
+    grid-column: 1 / -1;
+    background: #6b3a48;
+}
+
+.tecla.borrar:hover {
+    background: #824759;
+}

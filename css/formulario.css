@@ -1,0 +1,86 @@
+/* Formulario de contacto */
+.formulario form {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.formulario fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: .5rem 1.25rem 1.25rem;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+}
+
+.formulario legend {
+    padding: 0 .5rem;
+    font-weight: 650;
+    color: var(--acento-oscuro);
+}
+
+.formulario .campo {
+    display: grid;
+    gap: .3rem;
+    margin: .85rem 0 0;
+}
+
+.formulario label {
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+.formulario input:not([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="submit"], [type="reset"]),
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    max-width: 28rem;
+    padding: .5rem .65rem;
+    font: inherit;
+    color: var(--texto);
+    background: #fff;
+    border: 1px solid #c4c8d6;
+    border-radius: 8px;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 2px solid var(--acento);
+    outline-offset: 1px;
+    border-color: var(--acento);
+}
+
+.formulario input[type="range"] {
+    width: 100%;
+    max-width: 28rem;
+    accent-color: var(--acento);
+}
+
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] {
+    accent-color: var(--acento);
+}
+
+.formulario .titulo-grupo {
+    margin: 1rem 0 .25rem;
+    font-weight: 600;
+}
+
+.formulario .opcion {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .2rem 0;
+}
+
+.formulario .botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding-top: 1rem;
+}

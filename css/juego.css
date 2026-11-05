@@ -1,0 +1,66 @@
+/* Piedra, papel o tijera */
+.contenido .intro {
+    max-width: 30rem;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+
+.juego {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+}
+
+#pantalla {
+    width: 100%;
+    padding: .7rem;
+    font: inherit;
+    font-size: 1.2rem;
+    font-weight: 650;
+    text-align: center;
+    color: var(--texto);
+    background: var(--papel);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+}
+
+.eleccion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+    margin: 1rem 0;
+}
+
+.eleccion .boton {
+    padding: .8rem .5rem;
+}
+
+.jugada {
+    margin: 0 0 .75rem;
+    padding: 0;
+    list-style: none;
+    color: var(--texto-suave);
+}
+
+.jugada li {
+    margin: .15rem 0;
+}
+
+.marcador {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.marcador li {
+    padding: .5rem .75rem;
+    font-size: .95rem;
+    background: var(--papel);
+    border-radius: 8px;
+}

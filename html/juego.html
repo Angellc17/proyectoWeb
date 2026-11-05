@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Piedra, papel o tijera</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+        <link rel="stylesheet" href="../css/juego.css">
+        <script src="../js/menu.js" defer></script>
+        <script src="../js/juego.js" defer></script>
+    </head>
+    <body class="sitio">
+        <header class="cabecera">
+            <h1>Piedra, papel o tijera</h1>
+            <nav class="menu" aria-label="Principal">
+                <a href="../index.html">Inicio</a>
+                <a href="horario.html">Horario</a>
+                <a href="formulario.html">Formulario</a>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton activo" aria-expanded="false" aria-haspopup="true">JS</button>
+                    <div class="submenu">
+                            <a href="inicio_js.html">Inicio JS</a>
+                            <a href="calculadora.html">Calculadora</a>
+                            <a href="juego.html" aria-current="page">Piedra, papel o tijera</a>
+                    </div>
+                </div>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">Actividades complementarias</button>
+                    <div class="submenu">
+                            <a href="ejercicio1.html">Ejercicio 1</a>
+                            <a href="ejercicio2.html">Ejercicio 2</a>
+                            <a href="ejercicio3.html">Ejercicio 3</a>
+                            <a href="ejercicio4.html">Ejercicio 4</a>
+                            <a href="ejercicio5.html">Ejercicio 5</a>
+                            <a href="ejercicio6.html">Ejercicio 6</a>
+                            <a href="ejercicio7.html">Ejercicio 7</a>
+                            <a href="ejercicio8.html">Ejercicio 8</a>
+                            <a href="ejercicio9_pagina1.html">Ejercicio 9</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="contenido">
+            <p class="intro">Elige una opción y juega contra la máquina.</p>
+            <section class="juego">
+                <input type="text" id="pantalla" placeholder="Pulsa una opción para jugar" readonly aria-label="Resultado de la partida">
+                <div class="eleccion">
+                    <button type="button" class="boton" onclick="piedraPapelTijera('piedra')">Piedra</button>
+                    <button type="button" class="boton" onclick="piedraPapelTijera('papel')">Papel</button>
+                    <button type="button" class="boton" onclick="piedraPapelTijera('tijera')">Tijera</button>
+                </div>
+                <ul class="jugada" aria-live="polite">
+                    <li id="jugada-jugador">Tu elección: -</li>
+                    <li id="jugada-maquina">Elección de la máquina: -</li>
+                </ul>
+                <ul class="marcador">
+                    <li id="partidas">Partidas jugadas: 0</li>
+                    <li id="ganadas">Partidas ganadas: 0</li>
+                    <li id="empatadas">Partidas empatadas: 0</li>
+                    <li id="perdidas">Partidas perdidas: 0</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="pie">
+            <p>CIFP Virgen de Gracia</p>
+            <p>Contacto: <a href="mailto:correodeprueba@gmail.com">correodeprueba@gmail.com</a></p>
+        </footer>
+    </body>
+</html>
