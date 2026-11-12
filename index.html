@@ -3,90 +3,178 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Web de Ejemplo</title>
+        <meta name="theme-color" content="#f17e83">
+        <meta name="description" content="Portafolio de proyectos y prácticas de desarrollo web.">
+        <title>Portafolio | Desarrollo web</title>
         <link rel="stylesheet" href="css/estilo.css">
-        <script src="js/menu.js" defer></script>
+        <link rel="stylesheet" href="css/sitio-compartido.css">
+        <link rel="stylesheet" href="css/portafolio.css">
+        <script src="js/portafolio.js" defer></script>
     </head>
-    <body class="sitio">
-        <header class="cabecera">
-            <h1>Esta es mi primera WEB</h1>
-            <nav class="menu" aria-label="Principal">
-                <a href="index.html" aria-current="page">Inicio</a>
-                <a href="html/horario.html">Horario</a>
-                <a href="html/formulario.html">Formulario</a>
-                <div class="desplegable">
-                    <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">JS</button>
-                    <div class="submenu">
-                            <a href="html/inicio_js.html">Inicio JS</a>
-                            <a href="html/calculadora.html">Calculadora</a>
-                            <a href="html/juego.html">Piedra, papel o tijera</a>
+    <body class="sitio portafolio" data-theme="dark">
+        <main class="portfolio-shell">
+            <header class="portfolio-header">
+                <a class="brand" href="#inicio" aria-label="Portafolio, inicio">
+                    <span class="brand-mark" aria-hidden="true">A</span>
+                    <span>Mi portafolio<span class="brand-dot">.</span></span>
+                </a>
+                <nav class="portfolio-nav" aria-label="Navegación principal">
+                    <a href="#inicio" aria-current="page">Inicio</a>
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#ejercicios">Ejercicios</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <button class="theme-toggle" type="button" aria-label="Cambiar a modo claro" aria-pressed="true">
+                    <span class="theme-icon" aria-hidden="true">☼</span>
+                    <span class="theme-label">Modo claro</span>
+                </button>
+            </header>
+
+            <section class="hero" id="inicio" aria-labelledby="hero-title">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="status-dot"></span> Estudiante de desarrollo web</p>
+                    <h1 id="hero-title">Hola, soy<br><span>Angel.</span><br>Creo cosas<br>para la web.</h1>
+                    <p class="hero-description">Estoy aprendiendo a convertir ideas en páginas web útiles, accesibles y con personalidad.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#proyectos">Ver mis proyectos <span aria-hidden="true">↘</span></a>
+                        <a class="button button-quiet" href="#contacto">Hablemos</a>
+                    </div>
+                    <div class="hero-meta" id="sobre-mi">
+                        <span class="meta-line"></span>
+                        <p>Aprendiendo y construyendo<br><strong>un proyecto cada vez.</strong></p>
                     </div>
                 </div>
-                <div class="desplegable">
-                    <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">Actividades complementarias</button>
-                    <div class="submenu">
-                            <a href="html/ejercicio1.html">Ejercicio 1</a>
-                            <a href="html/ejercicio2.html">Ejercicio 2</a>
-                            <a href="html/ejercicio3.html">Ejercicio 3</a>
-                            <a href="html/ejercicio4.html">Ejercicio 4</a>
-                            <a href="html/ejercicio5.html">Ejercicio 5</a>
-                            <a href="html/ejercicio6.html">Ejercicio 6</a>
-                            <a href="html/ejercicio7.html">Ejercicio 7</a>
-                            <a href="html/ejercicio8.html">Ejercicio 8</a>
-                            <a href="html/ejercicio9_pagina1.html">Ejercicio 9</a>
+                <div class="hero-art" aria-label="Ilustración decorativa de diseño web">
+                    <div class="art-glow"></div>
+                    <div class="art-window">
+                        <div class="window-bar"><i></i><i></i><i></i><span>mi-siguiente-proyecto.html</span></div>
+                        <div class="window-content">
+                            <span class="code-line code-short"></span>
+                            <span class="code-line code-medium"></span>
+                            <span class="code-line code-long"></span>
+                            <span class="code-line code-medium"></span>
+                            <span class="code-line code-short"></span>
+                            <div class="window-card"><span></span><span></span><span></span></div>
+                        </div>
                     </div>
+                    <span class="floating-tag tag-html">&lt;/&gt; HTML</span>
+                    <span class="floating-tag tag-css">✳ CSS</span>
+                    <span class="floating-tag tag-js">JS</span>
+                    <span class="art-caption">Ideas que toman forma en la web.</span>
                 </div>
-            </nav>
-        </header>
+            </section>
 
-        <main class="contenido">
-            <h2>Hola mundo!</h2>
-            <p>Esto es un párrafo</p>
-            <ul class="materias">
-                <li>Programación</li>
-                <li>BBDD</li>
-                <li>LLMM</li>
-                <li>Entornos</li>
-                <li>IPE</li>
-            </ul>
+            <section class="skills-section" aria-labelledby="skills-title">
+                <div class="section-heading skills-heading">
+                    <div>
+                        <p class="eyebrow">Lo que estoy aprendiendo</p>
+                        <h2 id="skills-title">Mis herramientas</h2>
+                    </div>
+                    <p>Una base que crece con cada práctica y cada nuevo reto.</p>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <span class="skill-icon icon-html" aria-hidden="true">&lt;/&gt;</span>
+                        <div><h3>HTML</h3><p>Estructura y contenido para la web.</p></div>
+                        <span class="skill-number">01</span>
+                    </article>
+                    <article class="skill-card">
+                        <span class="skill-icon icon-css" aria-hidden="true">✳</span>
+                        <div><h3>CSS</h3><p>Estilos, diseño adaptable y detalles.</p></div>
+                        <span class="skill-number">02</span>
+                    </article>
+                    <article class="skill-card">
+                        <span class="skill-icon icon-js" aria-hidden="true">JS</span>
+                        <div><h3>JavaScript</h3><p>Interactividad y lógica en cada página.</p></div>
+                        <span class="skill-number">03</span>
+                    </article>
+                </div>
+            </section>
 
-            <h2>Imagen de Ejercicio</h2>
-            <figure class="figura">
-                <img src="img/imagen_inicio.png" alt="Imagen del ejercicio" width="1388" height="589">
-            </figure>
+            <section class="projects-section" id="proyectos" aria-labelledby="projects-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Una selección de prácticas</p>
+                        <h2 id="projects-title">Proyectos recientes<span class="brand-dot">.</span></h2>
+                    </div>
+                    <p>Ejercicios y pequeños proyectos que forman parte de mi aprendizaje.</p>
+                </div>
+                <div class="projects-grid">
+                    <a class="project-card project-coral" href="html/horario.html">
+                        <div class="project-preview preview-schedule" aria-hidden="true">
+                            <div class="preview-top"><span></span><span></span><span></span></div>
+                            <div class="schedule-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                        </div>
+                        <div class="project-info"><div><span class="project-type">HTML · CSS</span><h3>Horario semanal</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+                    </a>
+                    <a class="project-card project-blue" href="html/formulario.html">
+                        <div class="project-preview preview-form" aria-hidden="true">
+                            <div class="form-mock"><span></span><i></i><i></i><i></i><b></b></div>
+                            <div class="form-orb"></div>
+                        </div>
+                        <div class="project-info"><div><span class="project-type">HTML · CSS</span><h3>Formulario</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+                    </a>
+                    <a class="project-card project-yellow" href="html/calculadora.html">
+                        <div class="project-preview preview-calc" aria-hidden="true">
+                            <div class="calc-mock"><span>123</span><i>+</i><i>−</i><i>×</i><i>÷</i><i></i><i></i><i>=</i></div>
+                        </div>
+                        <div class="project-info"><div><span class="project-type">JAVASCRIPT</span><h3>Calculadora</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+                    </a>
+                    <a class="project-card project-green" href="html/juego.html">
+                        <div class="project-preview preview-game" aria-hidden="true">
+                            <span class="game-hand">✊</span><span class="game-versus">VS</span><span class="game-hand">✋</span>
+                            <span class="game-score">JUGADOR&nbsp; 01 : 00&nbsp; CPU</span>
+                        </div>
+                        <div class="project-info"><div><span class="project-type">JAVASCRIPT</span><h3>Piedra, papel o tijera</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+                    </a>
+                    <a class="project-card project-coral" href="html/inicio_js.html">
+                        <div class="project-preview preview-start" aria-hidden="true">
+                            <span class="start-symbol">&lt;JS&gt;</span>
+                            <span class="start-line"></span>
+                            <span class="start-line"></span>
+                            <span class="start-line"></span>
+                        </div>
+                        <div class="project-info"><div><span class="project-type">JAVASCRIPT</span><h3>Primeros pasos con JS</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+                    </a>
+                </div>
+            </section>
 
-            <h2>Secciones de la web</h2>
-            <ul class="indice">
-                <li>
-                    <a href="html/horario.html">
-                        <span class="titulo">Horario</span>
-                        <span class="detalle">Horario semanal de DAM1</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="html/formulario.html">
-                        <span class="titulo">Formulario</span>
-                        <span class="detalle">Formulario con los distintos tipos de campo de HTML</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="html/inicio_js.html">
-                        <span class="titulo">JavaScript</span>
-                        <span class="detalle">Calculadora, piedra papel o tijera y otras prácticas</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="html/ejercicio1.html">
-                        <span class="titulo">Actividades complementarias</span>
-                        <span class="detalle">Ejercicios 1 a 9 de HTML y CSS</span>
-                    </a>
-                </li>
-            </ul>
+            <section class="projects-section" id="ejercicios" aria-labelledby="exercises-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Prácticas originales, sin modificar</p>
+                        <h2 id="exercises-title">Todos mis ejercicios<span class="brand-dot">.</span></h2>
+                    </div>
+                    <p>Acceso directo a cada uno de los ejercicios que he realizado.</p>
+                </div>
+                <div class="exercise-directory">
+                    <a class="exercise-link" href="html/ejercicio1.html"><span>Ejercicio 1</span><span>↗</span></a>
+                    <a class="exercise-link" href="html/ejercicio2.html"><span>Ejercicio 2</span><span>↗</span></a>
+                    <a class="exercise-link" href="html/ejercicio3.html"><span>Ejercicio 3</span><span>↗</span></a>
+                    <a class="exercise-link" href="html/ejercicio4.html"><span>Ejercicio 4</span><span>↗</span></a>
+                    <a class="exercise-link" href="html/ejercicio5.html"><span>Ejercicio 5</span><span>↗</span></a>
+                    <a class="exercise-link" href="html/ejercicio6.html"><span>Ejercicio 6</span><span>↗</span></a>
+                    <a class="exercise-link" href="html/ejercicio7.html"><span>Ejercicio 7</span><span>↗</span></a>
+                    <a class="exercise-link" href="html/ejercicio8.html"><span>Ejercicio 8</span><span>↗</span></a>
+                    <a class="exercise-link" href="html/ejercicio9_pagina1.html"><span>Ejercicio 9</span><span>↗</span></a>
+                </div>
+            </section>
+
+            <section class="contact-section" id="contacto" aria-labelledby="contact-title">
+                <div>
+                    <p class="eyebrow">¿Tienes una idea?</p>
+                    <h2 id="contact-title">Sigamos en contacto.</h2>
+                    <p>Siempre hay algo nuevo que aprender o construir.</p>
+                </div>
+                <a class="button button-light" href="mailto:correodeprueba@gmail.com">Escríbeme <span aria-hidden="true">↗</span></a>
+            </section>
+
+            <footer class="portfolio-footer">
+                <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">A</span><span>Mi portafolio<span class="brand-dot">.</span></span></a>
+                <p>Hecho con curiosidad y muchas ganas de aprender.</p>
+                <a href="mailto:correodeprueba@gmail.com">Contacto <span aria-hidden="true">↗</span></a>
+            </footer>
         </main>
-
-        <footer class="pie">
-            <p>CIFP Virgen de Gracia</p>
-            <p>Contacto: <a href="mailto:correodeprueba@gmail.com">correodeprueba@gmail.com</a></p>
-        </footer>
     </body>
 </html>
