@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejemplo JavaScript</title>
         <link rel="stylesheet" href="../css/estilo.css">
+        <link rel="stylesheet" href="../css/inicio_js.css">
         <script src="../js/menu.js" defer></script>
         <script src="../js/script.js" defer></script>
         <script src="../js/ejercicio01.js" defer></script>
@@ -43,38 +44,79 @@
             </nav>
         </header>
 
-        <main class="contenido">
-            <h2>Hola, mundo</h2>
-            <p>Este es un ejemplo de documento HTML con JavaScript.</p>
+        <main class="contenido javascript-page">
+            <section class="js-hero" aria-labelledby="js-title">
+                <div class="js-hero-copy">
+                    <p class="js-eyebrow"><span></span> LABORATORIO · JAVASCRIPT</p>
+                    <h2 id="js-title">Ideas que<br>se vuelven <span>interactivas.</span></h2>
+                    <p>Pruebo variables, operaciones y lógica con ejemplos que puedes ejecutar aquí mismo.</p>
+                    <a class="js-hero-link" href="#operaciones">Explorar el laboratorio <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="js-code-card" aria-label="Ejemplo de código JavaScript">
+                    <div class="js-code-top"><span></span><span></span><span></span><small>laboratorio.js</small></div>
+                    <pre><code><span class="code-purple">const</span> <span class="code-blue">idea</span> = {
+  <span class="code-green">curiosidad</span>: <span class="code-yellow">true</span>,
+  <span class="code-green">practica</span>: <span class="code-yellow">"cada día"</span>
+};
 
-            <section class="panel">
-                <h3>Operaciones con variables</h3>
-                <p>Los botones usan las variables <code>numero1</code> (10) y <code>numero2</code> (5).</p>
-                <input type="text" id="mostrar" class="campo-resultado" value="0" readonly aria-label="Resultado">
-                <div class="fila-botones">
-                    <button type="button" class="boton" onclick="sumar()">Sumar</button>
-                    <button type="button" class="boton" onclick="restar()">Restar</button>
-                    <button type="button" class="boton" onclick="multiplicar()">Multiplicar</button>
-                    <button type="button" class="boton" onclick="dividir()">Dividir</button>
-                    <button type="button" class="boton boton-secundario" onclick="borrar()">Borrar</button>
+<span class="code-purple">function</span> <span class="code-blue">crear</span>() {
+  <span class="code-purple">return</span> idea + <span class="code-yellow">" + código"</span>;
+}</code></pre>
+                    <span class="js-code-badge">JS <strong>01</strong></span>
                 </div>
             </section>
 
-            <h2>Otras prácticas</h2>
-            <ul class="indice">
-                <li>
-                    <a href="calculadora.html">
-                        <span class="titulo">Calculadora</span>
-                        <span class="detalle">Calculadora con las cuatro operaciones básicas</span>
+            <section class="js-workbench" id="operaciones" aria-labelledby="operations-title">
+                <div class="js-section-title">
+                    <div>
+                        <p class="js-eyebrow">Prueba y experimenta</p>
+                        <h2 id="operations-title">Operaciones con variables</h2>
+                    </div>
+                    <p class="js-section-note">Cada clic ejecuta una operación usando los valores iniciales <code>10</code> y <code>5</code>.</p>
+                </div>
+                <div class="js-calculator">
+                    <div class="js-calc-info">
+                        <span class="js-step">01 / OPERACIONES</span>
+                        <h3>Tu pequeño<br>campo de pruebas.</h3>
+                        <p>Elige una operación y mira cómo cambia el resultado. Puedes encadenar operaciones o reiniciar cuando quieras.</p>
+                        <div class="js-variable-pills"><span><i>numero1</i> = 10</span><span><i>numero2</i> = 5</span></div>
+                    </div>
+                    <div class="js-calc-panel">
+                        <label class="js-display-label" for="mostrar">Resultado actual</label>
+                        <div class="js-display-wrap"><span aria-hidden="true">›</span><input type="text" id="mostrar" class="campo-resultado" value="0" readonly aria-label="Resultado"></div>
+                        <div class="js-calc-buttons">
+                            <button type="button" class="js-operation" onclick="sumar()"><span>＋</span> Sumar</button>
+                            <button type="button" class="js-operation" onclick="restar()"><span>−</span> Restar</button>
+                            <button type="button" class="js-operation" onclick="multiplicar()"><span>×</span> Multiplicar</button>
+                            <button type="button" class="js-operation" onclick="dividir()"><span>÷</span> Dividir</button>
+                            <button type="button" class="js-reset" onclick="borrar()">↺ <span>Borrar resultado</span></button>
+                        </div>
+                        <p class="js-calc-hint"><span aria-hidden="true">✦</span> Prueba a dividir después de sumar.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="js-practices" aria-labelledby="practices-title">
+                <div class="js-section-title">
+                    <div>
+                        <p class="js-eyebrow">Sigue explorando</p>
+                        <h2 id="practices-title">Más prácticas<span class="js-accent-dot">.</span></h2>
+                    </div>
+                    <p class="js-section-note">Pequeños proyectos para poner la lógica en acción.</p>
+                </div>
+                <div class="js-project-grid">
+                    <a class="js-project-card js-project-calculator" href="calculadora.html">
+                        <span class="js-project-icon" aria-hidden="true">÷</span>
+                        <span class="js-project-copy"><small>INTERACTIVO · 01</small><strong>Calculadora</strong><span>Opera con expresiones y números.</span></span>
+                        <span class="js-project-arrow" aria-hidden="true">↗</span>
                     </a>
-                </li>
-                <li>
-                    <a href="juego.html">
-                        <span class="titulo">Piedra, papel o tijera</span>
-                        <span class="detalle">Juego contra la máquina con marcador de partidas</span>
+                    <a class="js-project-card js-project-game" href="juego.html">
+                        <span class="js-project-icon" aria-hidden="true">✊</span>
+                        <span class="js-project-copy"><small>JUEGO · 02</small><strong>Piedra, papel o tijera</strong><span>Un reto rápido contra la máquina.</span></span>
+                        <span class="js-project-arrow" aria-hidden="true">↗</span>
                     </a>
-                </li>
-            </ul>
+                </div>
+            </section>
         </main>
 
         <footer class="pie">

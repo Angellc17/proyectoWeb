@@ -42,10 +42,20 @@
             </nav>
         </header>
 
-        <main class="contenido">
-            <h2>Horario Semanal</h2>
+        <main class="contenido horario-pagina">
+            <header class="horario-intro">
+                <div>
+                    <p class="horario-etiqueta">CIFP · DAM1</p>
+                    <h2>Mi semana, <span>en bloques.</span></h2>
+                    <p class="horario-descripcion">Cinco días de código, sistemas y nuevas ideas.</p>
+                </div>
+                <div class="horario-resumen" aria-label="Horario de lunes a viernes de 8:30 a 14:30">
+                    <span class="resumen-icono" aria-hidden="true">◷</span>
+                    <span><strong>Lunes — Viernes</strong><small>08:30 — 14:30</small></span>
+                </div>
+            </header>
             <div class="tabla-scroll">
-                <table class="horario">
+                <table class="horario" aria-label="Horario semanal de DAM1">
                     <thead>
                         <tr>
                             <th class="DAM" colspan="6">DAM1</th>
@@ -118,7 +128,7 @@
             </div>
         </main>
 
-        <footer class="pie">
+        <footer class="pie horario-footer">
             <p>CIFP Virgen de Gracia</p>
             <p>Contacto: <a href="mailto:correodeprueba@gmail.com">correodeprueba@gmail.com</a></p>
         </footer>

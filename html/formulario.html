@@ -43,9 +43,20 @@
         </header>
 
         <main class="contenido formulario">
-            <h2>Formulario de Contacto</h2>
-            <form>
-                <fieldset>
+            <section class="formulario-intro" aria-labelledby="formulario-titulo">
+                <div>
+                    <p class="formulario-etiqueta">Contacto · Cuéntame tu idea</p>
+                    <h2 id="formulario-titulo">Hagamos algo<br><span>bueno juntos.</span></h2>
+                    <p class="formulario-bajada">Rellena el formulario a tu ritmo. Cuantos más detalles compartas, mejor podré entender lo que necesitas.</p>
+                </div>
+                <aside class="formulario-nota">
+                    <span class="nota-icono" aria-hidden="true">✦</span>
+                    <p><strong>Tu próximo proyecto empieza aquí.</strong><span>Los campos están organizados para que sea fácil encontrar lo que buscas.</span></p>
+                    <a href="mailto:correodeprueba@gmail.com">¿Prefieres escribirme? <span aria-hidden="true">↗</span></a>
+                </aside>
+            </section>
+            <form class="formulario-form">
+                <fieldset class="grupo-contacto">
                     <legend>Datos de contacto</legend>
                     <!-- Nombre -->
                     <p class="campo">
@@ -84,7 +95,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="grupo-fechas">
                     <legend>Fechas y horas</legend>
                     <!-- Fecha -->
                     <p class="campo">
@@ -113,7 +124,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="grupo-numeros">
                     <legend>Valores numéricos</legend>
                     <!-- Edad -->
                     <p class="campo">
@@ -132,7 +143,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="grupo-opciones">
                     <legend>Opciones</legend>
                     <!-- Radio -->
                     <p class="titulo-grupo">Selecciona una opción:</p>
@@ -164,7 +175,7 @@
                     </div>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="grupo-listas">
                     <legend>Listas</legend>
                     <!-- Select -->
                     <p class="campo">
@@ -204,7 +215,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="grupo-texto">
                     <legend>Texto</legend>
                     <!-- Texto -->
                     <p class="campo">
@@ -213,7 +224,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="grupo-otros">
                     <legend>Otros elementos</legend>
                     <!-- File -->
                     <p class="campo">
@@ -235,7 +246,7 @@
                     <input type="hidden" name="id_usuario" value="123">
                 </fieldset>
 
-                <fieldset class="botones">
+                <fieldset class="botones grupo-botones">
                     <legend>Botones</legend>
                     <!-- Submit -->
                     <input type="submit" class="boton" value="Enviar formulario">
