@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../css/sitio-compartido.css">
         <script src="../js/portafolio.js" defer></script>
     </head>
-    <body class="sitio" data-theme="dark">
+    <body class="sitio calculadora-page" data-theme="dark">
         <header class="cabecera">
             <h1>Calculadora</h1>
             <nav class="menu" aria-label="Principal">
@@ -43,7 +43,12 @@
             </nav>
         </header>
 
-        <main class="contenido">
+        <main class="contenido calculadora-contenido">
+            <section class="calculadora-intro" aria-labelledby="calculadora-titulo">
+                <p class="calculadora-etiqueta">JavaScript · Operaciones</p>
+                <h1 id="calculadora-titulo">Calculadora<span>.</span></h1>
+                <p>Un espacio sencillo para resolver tus operaciones del día a día.</p>
+            </section>
             <section class="calculadora" aria-label="Calculadora">
                 <input type="text" id="pantalla" value="0" readonly aria-label="Pantalla">
                 <div class="teclas">

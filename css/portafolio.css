@@ -11,7 +11,7 @@ body.sitio.portafolio {
     --amarillo: #bb83f3;
     --verde: #b174ed;
     min-height: 100vh;
-    padding: clamp(1rem, 5vw, 4rem);
+    padding: 0;
     color: var(--texto-portada);
     background:
         radial-gradient(ellipse at 86% 12%, rgba(144, 48, 209, .42), transparent 25rem),
@@ -34,13 +34,14 @@ body.sitio.portafolio[data-theme="light"] {
 }
 
 .portfolio-shell {
-    width: min(100%, 74rem);
-    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
     overflow: hidden;
     background: var(--superficie);
-    border: 1px solid rgba(255, 255, 255, .13);
-    border-radius: 1.8rem;
-    box-shadow: 0 2rem 5rem rgba(51, 26, 34, .2);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .portfolio-header {
@@ -992,11 +993,11 @@ body.sitio.portafolio[data-theme="light"] {
 
 @media (max-width: 38rem) {
     .portafolio {
-        padding: .7rem;
+        padding: 0;
     }
 
     .portfolio-shell {
-        border-radius: 1.15rem;
+        border-radius: 0;
     }
 
     .portfolio-header {
