@@ -1,66 +1,329 @@
-/* Piedra, papel o tijera */
-.contenido .intro {
-    max-width: 30rem;
-    margin: 0 auto 1rem;
+body.sitio.juego-retro:not(.portafolio) {
+    --fondo-exterior: #160c24;
+    --superficie: #211333;
+    --superficie-2: #2b1b40;
+    --superficie-3: #39224f;
+    --texto-portada: #fff5d6;
+    --texto-secundario: #b7a6c8;
+    --borde-portada: #604779;
+    --rosa: #ff5ca8;
+    --arcade-cian: #68f2dc;
+    --arcade-amarillo: #ffe66d;
+    --arcade-rojo: #ff7185;
+    color: var(--texto-portada);
+    background:
+        radial-gradient(ellipse at 50% 0, rgba(111, 43, 181, .28), transparent 34rem),
+        var(--fondo-exterior);
+}
+
+body.sitio.juego-retro:not(.portafolio)[data-theme="light"] {
+    --fondo-exterior: #f4eff7;
+    --superficie: #fffdf9;
+    --superficie-2: #f5eff8;
+    --superficie-3: #eee5f3;
+    --texto-portada: #352642;
+    --texto-secundario: #756a7d;
+    --borde-portada: #ded2e4;
+    --rosa: #a94782;
+    --arcade-cian: #4a827b;
+    --arcade-amarillo: #9a762c;
+    --arcade-rojo: #b65367;
+    background:
+        radial-gradient(ellipse at 50% 0, rgba(111, 43, 181, .08), transparent 34rem),
+        var(--fondo-exterior);
+}
+
+body.sitio.juego-retro:not(.portafolio)[data-theme="light"] .juego-encabezado h1 {
+    text-shadow: 2px 2px 0 rgba(111, 43, 181, .12);
+}
+
+body.sitio.juego-retro:not(.portafolio)[data-theme="light"] .juego {
+    background:
+        linear-gradient(rgba(111, 43, 181, .018) 50%, transparent 50%),
+        var(--superficie);
+    border-color: #c6afd2;
+    box-shadow: 0 18px 45px rgba(53, 38, 66, .12);
+}
+
+body.sitio.juego-retro:not(.portafolio)[data-theme="light"] .estado-partida {
+    box-shadow: inset 0 0 0 1px rgba(53, 38, 66, .035);
+}
+
+body.sitio.juego-retro:not(.portafolio)[data-theme="light"] .resultado-icono {
+    box-shadow: 2px 2px 0 rgba(53, 38, 66, .12);
+    text-shadow: none;
+}
+
+body.sitio.juego-retro:not(.portafolio)[data-theme="light"] .eleccion .boton {
+    border-color: #c89abb;
+    box-shadow: 3px 3px 0 rgba(53, 38, 66, .12);
+}
+
+body.sitio.juego-retro:not(.portafolio)[data-theme="light"] .eleccion .boton:hover {
+    color: #fffdf9;
+    background: var(--rosa);
+    box-shadow: 2px 2px 0 rgba(53, 38, 66, .12);
+}
+
+body.sitio.juego-retro:not(.portafolio)[data-theme="light"] .eleccion .boton:hover span {
+    color: #fff1bd;
+}
+
+body.sitio.juego-retro:not(.portafolio) .contenido {
+    flex: 1;
+    width: min(calc(100% - 2rem), 48rem);
+    max-width: none;
+    margin: clamp(2rem, 6vw, 4rem) auto;
+    padding: 0;
+    color: var(--texto-portada);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.juego-encabezado {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.juego-encabezado .etiqueta-arcade {
+    margin: 0 0 .75rem;
+    color: var(--arcade-cian);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+.juego-encabezado h1 {
+    margin: 0;
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    line-height: 1.12;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 #6f2bb5;
+}
+
+.juego-encabezado h1 span {
+    color: var(--rosa);
+}
+
+.juego-encabezado .intro {
+    margin: .8rem auto 0;
+    color: var(--texto-secundario);
     text-align: center;
 }
 
 .juego {
-    max-width: 30rem;
-    margin: 0 auto;
-    padding: 1.5rem;
-    background: #fff;
-    border: 1px solid var(--borde);
-    border-radius: 14px;
+    position: relative;
+    padding: clamp(1rem, 4vw, 2rem);
+    background:
+        linear-gradient(rgba(255, 255, 255, .025) 50%, transparent 50%),
+        var(--superficie);
+    background-size: 100% 4px, auto;
+    border: 3px solid var(--arcade-cian);
+    box-shadow: 6px 6px 0 #100819, 0 0 0 6px var(--superficie-2);
+}
+
+.estado-partida {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 6rem;
+    padding: .9rem 1rem;
+    background: var(--superficie-2);
+    border: 2px solid var(--borde-portada);
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .12);
+}
+
+.resultado-icono {
+    display: grid;
+    flex: 0 0 3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    place-items: center;
+    color: var(--arcade-amarillo);
+    background: var(--superficie);
+    border: 2px solid currentColor;
+    box-shadow: 3px 3px 0 #100819;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .4);
+}
+
+.resultado-mensaje {
+    min-width: 0;
+}
+
+.resultado-etiqueta {
+    color: var(--texto-secundario);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
 }
 
 #pantalla {
-    width: 100%;
-    padding: .7rem;
-    font: inherit;
-    font-size: 1.2rem;
-    font-weight: 650;
-    text-align: center;
-    color: var(--texto);
-    background: var(--papel);
-    border: 1px solid var(--borde);
-    border-radius: 8px;
+    margin: .2rem 0 0;
+    color: var(--texto-portada);
+    font-size: clamp(1rem, 4vw, 1.35rem);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.estado-partida[data-resultado="ganada"] {
+    border-color: var(--arcade-cian);
+}
+
+.estado-partida[data-resultado="ganada"] .resultado-icono {
+    color: var(--arcade-cian);
+}
+
+.estado-partida[data-resultado="perdida"] {
+    border-color: var(--arcade-rojo);
+}
+
+.estado-partida[data-resultado="perdida"] .resultado-icono {
+    color: var(--arcade-rojo);
+}
+
+.estado-partida[data-resultado="empatada"] {
+    border-color: var(--arcade-amarillo);
+}
+
+.estado-partida[data-resultado="empatada"] .resultado-icono {
+    color: var(--arcade-amarillo);
+}
+
+.seccion-juego {
+    margin: 1.5rem 0 .75rem;
+    color: var(--texto-secundario);
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
 }
 
 .eleccion {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: .5rem;
-    margin: 1rem 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+    margin: 0;
 }
 
 .eleccion .boton {
-    padding: .8rem .5rem;
+    min-height: 3.5rem;
+    padding: .7rem .5rem;
+    color: var(--texto-portada);
+    background: var(--superficie-3);
+    border: 2px solid var(--rosa);
+    border-radius: 0;
+    box-shadow: 4px 4px 0 #100819;
+    font: inherit;
+    font-size: .95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .12s, box-shadow .12s, background-color .12s;
+}
+
+.eleccion .boton span {
+    margin-right: .25rem;
+    color: var(--arcade-amarillo);
+    font-size: 1.1rem;
+}
+
+.eleccion .boton:hover {
+    background: var(--rosa);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #100819;
+}
+
+.eleccion .boton:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
 }
 
 .jugada {
-    margin: 0 0 .75rem;
-    padding: 0;
-    list-style: none;
-    color: var(--texto-suave);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--borde-portada);
 }
 
-.jugada li {
-    margin: .15rem 0;
+.jugada .seccion-juego {
+    grid-column: 1 / -1;
+    margin: 0 0 .25rem;
+}
+
+.jugada p {
+    margin: 0;
+    padding: .65rem;
+    color: var(--texto-secundario);
+    background: var(--superficie-2);
+    font-size: .85rem;
+}
+
+.jugada .jugada-etiqueta {
+    display: block;
+    margin-bottom: .25rem;
+    color: var(--arcade-cian);
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .12em;
 }
 
 .marcador {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: .5rem;
-    margin: 0;
+    margin: 1.25rem 0 0;
     padding: 0;
     list-style: none;
 }
 
 .marcador li {
-    padding: .5rem .75rem;
-    font-size: .95rem;
-    background: var(--papel);
-    border-radius: 8px;
+    display: grid;
+    justify-items: center;
+    gap: .2rem;
+    padding: .65rem .35rem;
+    background: var(--superficie-2);
+    border: 1px solid var(--borde-portada);
+    text-align: center;
+}
+
+.marcador-valor {
+    color: var(--arcade-amarillo);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.marcador-etiqueta {
+    color: var(--texto-secundario);
+    font-size: .65rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 32rem) {
+    .eleccion {
+        grid-template-columns: 1fr;
+        gap: .55rem;
+    }
+
+    .eleccion .boton {
+        min-height: 3rem;
+    }
+
+    .jugada {
+        grid-template-columns: 1fr;
+    }
+
+    .jugada .seccion-juego {
+        grid-column: auto;
+    }
+
+    .marcador {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }

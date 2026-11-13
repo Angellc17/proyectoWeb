@@ -10,27 +10,35 @@ let perdidas = 0;
 
 function piedraPapelTijera(jugador) {
     const maquina = obtenerEleccionAleatoria();
+    const estadoPartida = document.getElementById("estado-partida");
+    const iconoResultado = document.getElementById("icono-resultado");
     partidas++;
 
     if (jugador === maquina) {
-        document.getElementById("pantalla").value = "Empate";
+        estadoPartida.dataset.resultado = "empatada";
+        iconoResultado.textContent = "=";
+        document.getElementById("pantalla").textContent = "¡Empate!";
         empatadas++;
     } else if (
         (jugador === 'piedra' && maquina === 'tijera') ||
         (jugador === 'tijera' && maquina === 'papel') ||
         (jugador === 'papel' && maquina === 'piedra')
     ) {
-        document.getElementById("pantalla").value = "Gana el jugador";
+        estadoPartida.dataset.resultado = "ganada";
+        iconoResultado.textContent = "★";
+        document.getElementById("pantalla").textContent = "¡Has ganado!";
         ganadas++;
     } else {
-        document.getElementById("pantalla").value = "Gana la máquina";
+        estadoPartida.dataset.resultado = "perdida";
+        iconoResultado.textContent = "×";
+        document.getElementById("pantalla").textContent = "Gana la máquina";
         perdidas++;
     }
 
     document.getElementById("jugada-jugador").textContent = `Tu elección: ${jugador}`;
     document.getElementById("jugada-maquina").textContent = `Elección de la máquina: ${maquina}`;
-    document.getElementById("partidas").textContent = `Partidas jugadas: ${partidas}`;
-    document.getElementById("ganadas").textContent = `Partidas ganadas: ${ganadas}`;
-    document.getElementById("empatadas").textContent = `Partidas empatadas: ${empatadas}`;
-    document.getElementById("perdidas").textContent = `Partidas perdidas: ${perdidas}`;
+    document.querySelector("#partidas .marcador-valor").textContent = partidas;
+    document.querySelector("#ganadas .marcador-valor").textContent = ganadas;
+    document.querySelector("#empatadas .marcador-valor").textContent = empatadas;
+    document.querySelector("#perdidas .marcador-valor").textContent = perdidas;
 }

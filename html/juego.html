@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../css/sitio-compartido.css">
         <script src="../js/portafolio.js" defer></script>
     </head>
-    <body class="sitio" data-theme="dark">
+    <body class="sitio juego-retro" data-theme="dark">
         <header class="cabecera">
             <h1>Piedra, papel o tijera</h1>
             <nav class="menu" aria-label="Principal">
@@ -44,23 +44,35 @@
         </header>
 
         <main class="contenido">
-            <p class="intro">Elige una opción y juega contra la máquina.</p>
-            <section class="juego">
-                <input type="text" id="pantalla" placeholder="Pulsa una opción para jugar" readonly aria-label="Resultado de la partida">
-                <div class="eleccion">
-                    <button type="button" class="boton" onclick="piedraPapelTijera('piedra')">Piedra</button>
-                    <button type="button" class="boton" onclick="piedraPapelTijera('papel')">Papel</button>
-                    <button type="button" class="boton" onclick="piedraPapelTijera('tijera')">Tijera</button>
+            <section class="juego-encabezado" aria-labelledby="titulo-juego">
+                <p class="etiqueta-arcade"><span aria-hidden="true">◆</span> RETRO ARCADE / JUEGO 01</p>
+                <h1 id="titulo-juego">Piedra, papel <span>o tijera</span></h1>
+                <p class="intro">Elige tu movimiento y reta a la máquina.</p>
+            </section>
+            <section class="juego" aria-label="Partida de piedra, papel o tijera">
+                <div class="estado-partida" id="estado-partida" data-resultado="inicio" aria-live="polite" aria-atomic="true">
+                    <span class="resultado-icono" id="icono-resultado" aria-hidden="true">?</span>
+                    <div class="resultado-mensaje">
+                        <span class="resultado-etiqueta">Resultado de la ronda</span>
+                        <p id="pantalla">Elige tu movimiento</p>
+                    </div>
                 </div>
-                <ul class="jugada" aria-live="polite">
-                    <li id="jugada-jugador">Tu elección: -</li>
-                    <li id="jugada-maquina">Elección de la máquina: -</li>
-                </ul>
-                <ul class="marcador">
-                    <li id="partidas">Partidas jugadas: 0</li>
-                    <li id="ganadas">Partidas ganadas: 0</li>
-                    <li id="empatadas">Partidas empatadas: 0</li>
-                    <li id="perdidas">Partidas perdidas: 0</li>
+                <h2 class="seccion-juego">Selecciona tu jugada</h2>
+                <div class="eleccion">
+                    <button type="button" class="boton" onclick="piedraPapelTijera('piedra')"><span aria-hidden="true">●</span> Piedra</button>
+                    <button type="button" class="boton" onclick="piedraPapelTijera('papel')"><span aria-hidden="true">▤</span> Papel</button>
+                    <button type="button" class="boton" onclick="piedraPapelTijera('tijera')"><span aria-hidden="true">✂</span> Tijera</button>
+                </div>
+                <div class="jugada">
+                    <h2 class="seccion-juego">Último enfrentamiento</h2>
+                    <p><span class="jugada-etiqueta">JUGADOR 1</span><span id="jugada-jugador">Tu elección: -</span></p>
+                    <p><span class="jugada-etiqueta">CPU</span><span id="jugada-maquina">Elección de la máquina: -</span></p>
+                </div>
+                <ul class="marcador" aria-label="Marcador">
+                    <li id="partidas"><span class="marcador-valor">0</span><span class="marcador-etiqueta">Partidas</span></li>
+                    <li id="ganadas"><span class="marcador-valor">0</span><span class="marcador-etiqueta">Ganadas</span></li>
+                    <li id="empatadas"><span class="marcador-valor">0</span><span class="marcador-etiqueta">Empatadas</span></li>
+                    <li id="perdidas"><span class="marcador-valor">0</span><span class="marcador-etiqueta">Perdidas</span></li>
                 </ul>
             </section>
         </main>
