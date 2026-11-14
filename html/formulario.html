@@ -4,59 +4,64 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulario</title>
+        <meta name="description" content="Formulario con todos los tipos de campo de HTML.">
+        <meta name="theme-color" content="#1e1d27">
+        <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+        <script>if(self!==top)document.documentElement.classList.add("en-marco");try{var d=document.documentElement,t=localStorage.getItem("tema");d.dataset.tema=t||(matchMedia("(prefers-color-scheme: dark)").matches?"oscuro":"claro")}catch(e){}</script>
+        <link rel="stylesheet" href="../css/menu.css">
         <link rel="stylesheet" href="../css/estilo.css">
         <link rel="stylesheet" href="../css/formulario.css">
         <script src="../js/menu.js" defer></script>
-        <link rel="stylesheet" href="../css/sitio-compartido.css">
-        <script src="../js/portafolio.js" defer></script>
+        <link rel="stylesheet" href="../css/codigo.css">
+        <script src="../js/codigo.js" defer></script>
     </head>
-    <body class="sitio" data-theme="dark">
-        <header class="cabecera">
-            <h1>Esta es mi primera WEB</h1>
-            <nav class="menu" aria-label="Principal">
+    <body class="sitio">
+        <header class="barra">
+            <a class="marca" href="../index.html">Lenguaje de Marcas</a>
+            <nav class="menu" id="menu-principal" aria-label="Principal">
                 <a href="../index.html">Inicio</a>
+                <a href="temas.html">Temas</a>
                 <a href="horario.html">Horario</a>
                 <a href="formulario.html" aria-current="page">Formulario</a>
                 <div class="desplegable">
                     <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">JS</button>
                     <div class="submenu">
-                            <a href="inicio_js.html">Inicio JS</a>
-                            <a href="calculadora.html">Calculadora</a>
-                            <a href="juego.html">Piedra, papel o tijera</a>
+                        <a href="inicio_js.html" style="--i:0">Inicio JS</a>
+                        <a href="calculadora.html" style="--i:1">Calculadora</a>
+                        <a href="juego.html" style="--i:2">Piedra, papel o tijera</a>
                     </div>
                 </div>
                 <div class="desplegable">
                     <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">Actividades complementarias</button>
                     <div class="submenu">
-                            <a href="ejercicio1.html">Ejercicio 1</a>
-                            <a href="ejercicio2.html">Ejercicio 2</a>
-                            <a href="ejercicio3.html">Ejercicio 3</a>
-                            <a href="ejercicio4.html">Ejercicio 4</a>
-                            <a href="ejercicio5.html">Ejercicio 5</a>
-                            <a href="ejercicio6.html">Ejercicio 6</a>
-                            <a href="ejercicio7.html">Ejercicio 7</a>
-                            <a href="ejercicio8.html">Ejercicio 8</a>
-                            <a href="ejercicio9_pagina1.html">Ejercicio 9</a>
+                        <a href="actividades.html" style="--i:0">Todas las actividades</a>
+                        <a href="ejercicio1.html" style="--i:1">Ejercicio 1</a>
+                        <a href="ejercicio2.html" style="--i:2">Ejercicio 2</a>
+                        <a href="ejercicio3.html" style="--i:3">Ejercicio 3</a>
+                        <a href="ejercicio4.html" style="--i:4">Ejercicio 4</a>
+                        <a href="ejercicio5.html" style="--i:5">Ejercicio 5</a>
+                        <a href="ejercicio6.html" style="--i:6">Ejercicio 6</a>
+                        <a href="ejercicio7.html" style="--i:7">Ejercicio 7</a>
+                        <a href="ejercicio8.html" style="--i:8">Ejercicio 8</a>
+                        <a href="ejercicio9_pagina1.html" style="--i:9">Ejercicio 9</a>
                     </div>
                 </div>
+                <span class="indicador" aria-hidden="true"></span>
             </nav>
+            <button type="button" class="tema-toggle" aria-pressed="false" aria-label="Cambiar a modo oscuro"><svg class="icono-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icono-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú"><span></span><span></span><span></span></button>
         </header>
 
+        <div class="cabecera">
+            <h1>Tu espacio para contar</h1>
+            <p class="cabecera-texto">Explora los campos de HTML y personaliza tu formulario.</p>
+        </div>
+
         <main class="contenido formulario">
-            <section class="formulario-intro" aria-labelledby="formulario-titulo">
-                <div>
-                    <p class="formulario-etiqueta">Contacto · Cuéntame tu idea</p>
-                    <h2 id="formulario-titulo">Hagamos algo<br><span>bueno juntos.</span></h2>
-                    <p class="formulario-bajada">Rellena el formulario a tu ritmo. Cuantos más detalles compartas, mejor podré entender lo que necesitas.</p>
-                </div>
-                <aside class="formulario-nota">
-                    <span class="nota-icono" aria-hidden="true">✦</span>
-                    <p><strong>Tu próximo proyecto empieza aquí.</strong><span>Los campos están organizados para que sea fácil encontrar lo que buscas.</span></p>
-                    <a href="mailto:correodeprueba@gmail.com">¿Prefieres escribirme? <span aria-hidden="true">↗</span></a>
-                </aside>
-            </section>
-            <form class="formulario-form">
-                <fieldset class="grupo-contacto">
+            <h2>Un formulario, muchos campos</h2>
+            <p class="formulario-intro">Datos personales, fechas, preferencias y mucho más. Prueba los distintos controles.</p>
+            <form>
+                <fieldset class="datos-contacto">
                     <legend>Datos de contacto</legend>
                     <!-- Nombre -->
                     <p class="campo">
@@ -95,7 +100,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset class="grupo-fechas">
+                <fieldset>
                     <legend>Fechas y horas</legend>
                     <!-- Fecha -->
                     <p class="campo">
@@ -124,7 +129,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset class="grupo-numeros">
+                <fieldset>
                     <legend>Valores numéricos</legend>
                     <!-- Edad -->
                     <p class="campo">
@@ -143,7 +148,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset class="grupo-opciones">
+                <fieldset>
                     <legend>Opciones</legend>
                     <!-- Radio -->
                     <p class="titulo-grupo">Selecciona una opción:</p>
@@ -175,7 +180,7 @@
                     </div>
                 </fieldset>
 
-                <fieldset class="grupo-listas">
+                <fieldset>
                     <legend>Listas</legend>
                     <!-- Select -->
                     <p class="campo">
@@ -215,7 +220,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset class="grupo-texto">
+                <fieldset class="texto">
                     <legend>Texto</legend>
                     <!-- Texto -->
                     <p class="campo">
@@ -224,7 +229,7 @@
                     </p>
                 </fieldset>
 
-                <fieldset class="grupo-otros">
+                <fieldset>
                     <legend>Otros elementos</legend>
                     <!-- File -->
                     <p class="campo">
@@ -246,7 +251,7 @@
                     <input type="hidden" name="id_usuario" value="123">
                 </fieldset>
 
-                <fieldset class="botones grupo-botones">
+                <fieldset class="botones">
                     <legend>Botones</legend>
                     <!-- Submit -->
                     <input type="submit" class="boton" value="Enviar formulario">
@@ -260,5 +265,299 @@
             <p>CIFP Virgen de Gracia</p>
             <p>Contacto: <a href="mailto:correodeprueba@gmail.com">correodeprueba@gmail.com</a></p>
         </footer>
+        <button type="button" class="codigo-abrir" aria-controls="codigo-panel" aria-expanded="false"><span class="codigo-icono" aria-hidden="true">&lt;/&gt;</span> Ver código</button>
+        <div class="codigo-fondo"></div>
+        <aside class="codigo-panel" id="codigo-panel" role="dialog" aria-label="Código de esta página">
+            <div class="codigo-cab">
+                <div class="codigo-tabs" role="tablist"><button type="button" role="tab" id="tab-0" aria-controls="bloque-0" aria-selected="true" tabindex="0">HTML</button><button type="button" role="tab" id="tab-1" aria-controls="bloque-1" aria-selected="false" tabindex="-1">formulario.css</button></div>
+                <button type="button" class="codigo-copiar">Copiar</button>
+                <button type="button" class="codigo-cerrar" aria-label="Cerrar">×</button>
+            </div>
+            <div class="codigo-cuerpo"><pre class="codigo-bloque" id="bloque-0" role="tabpanel" aria-labelledby="tab-0"><code><span class="t-tag">&lt;h2</span><span class="t-tag">&gt;</span>Formulario de Contacto<span class="t-tag">&lt;/h2</span><span class="t-tag">&gt;</span>
+<span class="t-tag">&lt;form</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;fieldset</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;legend</span><span class="t-tag">&gt;</span>Datos de contacto<span class="t-tag">&lt;/legend</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Nombre --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"nombre"</span><span class="t-tag">&gt;</span>Nombre<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"text"</span> <span class="t-attr">name</span>=<span class="t-str">"nombre"</span> <span class="t-attr">id</span>=<span class="t-str">"nombre"</span> <span class="t-attr">placeholder</span>=<span class="t-str">"Escribe tu nombre"</span> <span class="t-attr">required</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Apellido --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"apellido"</span><span class="t-tag">&gt;</span>Apellido<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"text"</span> <span class="t-attr">name</span>=<span class="t-str">"apellido"</span> <span class="t-attr">id</span>=<span class="t-str">"apellido"</span> <span class="t-attr">placeholder</span>=<span class="t-str">"Escribe tu apellido"</span> <span class="t-attr">required</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Contraseña --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"contrasena"</span><span class="t-tag">&gt;</span>Contraseña<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"password"</span> <span class="t-attr">name</span>=<span class="t-str">"contrasena"</span> <span class="t-attr">id</span>=<span class="t-str">"contrasena"</span> <span class="t-attr">placeholder</span>=<span class="t-str">"Escribe tu contraseña"</span> <span class="t-attr">required</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Correo --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"correo"</span><span class="t-tag">&gt;</span>Correo electrónico<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"email"</span> <span class="t-attr">name</span>=<span class="t-str">"correo"</span> <span class="t-attr">id</span>=<span class="t-str">"correo"</span> <span class="t-attr">placeholder</span>=<span class="t-str">"Escribe tu correo"</span> <span class="t-attr">required</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Teléfono --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"telefono"</span><span class="t-tag">&gt;</span>Teléfono<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"tel"</span> <span class="t-attr">name</span>=<span class="t-str">"telefono"</span> <span class="t-attr">id</span>=<span class="t-str">"telefono"</span> <span class="t-attr">placeholder</span>=<span class="t-str">"Escribe tu teléfono"</span> <span class="t-attr">required</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Página web --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"web"</span><span class="t-tag">&gt;</span>Sitio web<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"url"</span> <span class="t-attr">name</span>=<span class="t-str">"web"</span> <span class="t-attr">id</span>=<span class="t-str">"web"</span> <span class="t-attr">placeholder</span>=<span class="t-str">"Escribe la URL de tu sitio web"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Buscar --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"buscar"</span><span class="t-tag">&gt;</span>Buscar<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"search"</span> <span class="t-attr">name</span>=<span class="t-str">"buscar"</span> <span class="t-attr">id</span>=<span class="t-str">"buscar"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/fieldset</span><span class="t-tag">&gt;</span>
+
+    <span class="t-tag">&lt;fieldset</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;legend</span><span class="t-tag">&gt;</span>Fechas y horas<span class="t-tag">&lt;/legend</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Fecha --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"fecha"</span><span class="t-tag">&gt;</span>Fecha:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"date"</span> <span class="t-attr">name</span>=<span class="t-str">"fecha"</span> <span class="t-attr">id</span>=<span class="t-str">"fecha"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Hora --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"hora"</span><span class="t-tag">&gt;</span>Hora:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"time"</span> <span class="t-attr">name</span>=<span class="t-str">"hora"</span> <span class="t-attr">id</span>=<span class="t-str">"hora"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Fecha y hora --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"fechaHora"</span><span class="t-tag">&gt;</span>Fecha y hora:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"datetime-local"</span> <span class="t-attr">name</span>=<span class="t-str">"fechaHora"</span> <span class="t-attr">id</span>=<span class="t-str">"fechaHora"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Mes --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"mes"</span><span class="t-tag">&gt;</span>Mes:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"month"</span> <span class="t-attr">name</span>=<span class="t-str">"mes"</span> <span class="t-attr">id</span>=<span class="t-str">"mes"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Semana --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"semana"</span><span class="t-tag">&gt;</span>Semana:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"week"</span> <span class="t-attr">name</span>=<span class="t-str">"semana"</span> <span class="t-attr">id</span>=<span class="t-str">"semana"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/fieldset</span><span class="t-tag">&gt;</span>
+
+    <span class="t-tag">&lt;fieldset</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;legend</span><span class="t-tag">&gt;</span>Valores numéricos<span class="t-tag">&lt;/legend</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Edad --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"edad"</span><span class="t-tag">&gt;</span>Edad:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"number"</span> <span class="t-attr">name</span>=<span class="t-str">"edad"</span> <span class="t-attr">id</span>=<span class="t-str">"edad"</span> <span class="t-attr">min</span>=<span class="t-str">"0"</span> <span class="t-attr">max</span>=<span class="t-str">"120"</span> <span class="t-attr">step</span>=<span class="t-str">"1"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Rango --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"valor"</span><span class="t-tag">&gt;</span>Nivel:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"range"</span> <span class="t-attr">name</span>=<span class="t-str">"valor"</span> <span class="t-attr">id</span>=<span class="t-str">"valor"</span> <span class="t-attr">min</span>=<span class="t-str">"0"</span> <span class="t-attr">max</span>=<span class="t-str">"100"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Color --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"color"</span><span class="t-tag">&gt;</span>Color favorito<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"color"</span> <span class="t-attr">name</span>=<span class="t-str">"color"</span> <span class="t-attr">id</span>=<span class="t-str">"color"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/fieldset</span><span class="t-tag">&gt;</span>
+
+    <span class="t-tag">&lt;fieldset</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;legend</span><span class="t-tag">&gt;</span>Opciones<span class="t-tag">&lt;/legend</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Radio --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"titulo-grupo"</span><span class="t-tag">&gt;</span>Selecciona una opción:<span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-str">"opcion"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"radio"</span> <span class="t-attr">name</span>=<span class="t-str">"opcion"</span> <span class="t-attr">id</span>=<span class="t-str">"opcion1"</span> <span class="t-attr">value</span>=<span class="t-str">"1"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"opcion1"</span><span class="t-tag">&gt;</span>Opción 1<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/div</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-str">"opcion"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"radio"</span> <span class="t-attr">name</span>=<span class="t-str">"opcion"</span> <span class="t-attr">id</span>=<span class="t-str">"opcion2"</span> <span class="t-attr">value</span>=<span class="t-str">"2"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"opcion2"</span><span class="t-tag">&gt;</span>Opción 2<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/div</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-str">"opcion"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"radio"</span> <span class="t-attr">name</span>=<span class="t-str">"opcion"</span> <span class="t-attr">id</span>=<span class="t-str">"opcion3"</span> <span class="t-attr">value</span>=<span class="t-str">"3"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"opcion3"</span><span class="t-tag">&gt;</span>Opción 3<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/div</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Checkbox --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"titulo-grupo"</span><span class="t-tag">&gt;</span>Selecciona tus aficiones:<span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-str">"opcion"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"checkbox"</span> <span class="t-attr">name</span>=<span class="t-str">"aficiones"</span> <span class="t-attr">id</span>=<span class="t-str">"deporte"</span> <span class="t-attr">value</span>=<span class="t-str">"deporte"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"deporte"</span><span class="t-tag">&gt;</span>Deporte<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/div</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-str">"opcion"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"checkbox"</span> <span class="t-attr">name</span>=<span class="t-str">"aficiones"</span> <span class="t-attr">id</span>=<span class="t-str">"musica"</span> <span class="t-attr">value</span>=<span class="t-str">"musica"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"musica"</span><span class="t-tag">&gt;</span>Música<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/div</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;div</span> <span class="t-attr">class</span>=<span class="t-str">"opcion"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"checkbox"</span> <span class="t-attr">name</span>=<span class="t-str">"aficiones"</span> <span class="t-attr">id</span>=<span class="t-str">"informatica"</span> <span class="t-attr">value</span>=<span class="t-str">"informatica"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"informatica"</span><span class="t-tag">&gt;</span>Informática<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/div</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/fieldset</span><span class="t-tag">&gt;</span>
+
+    <span class="t-tag">&lt;fieldset</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;legend</span><span class="t-tag">&gt;</span>Listas<span class="t-tag">&lt;/legend</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Select --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"provincia"</span><span class="t-tag">&gt;</span>Provincia:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;select</span> <span class="t-attr">name</span>=<span class="t-str">"provincia"</span> <span class="t-attr">id</span>=<span class="t-str">"provincia"</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">""</span><span class="t-tag">&gt;</span>Selecciona una provincia<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"cordoba"</span><span class="t-tag">&gt;</span>Córdoba<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"ciudad_real"</span><span class="t-tag">&gt;</span>Ciudad Real<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"toledo"</span><span class="t-tag">&gt;</span>Toledo<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"jaen"</span><span class="t-tag">&gt;</span>Jaén<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;/select</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Select con grupos --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"estudio"</span><span class="t-tag">&gt;</span>Estudios:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;select</span> <span class="t-attr">name</span>=<span class="t-str">"estudio"</span> <span class="t-attr">id</span>=<span class="t-str">"estudio"</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;optgroup</span> <span class="t-attr">label</span>=<span class="t-str">"Informática"</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"dam"</span><span class="t-tag">&gt;</span>DAM<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"daw"</span><span class="t-tag">&gt;</span>DAW<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"asir"</span><span class="t-tag">&gt;</span>ASIR<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;/optgroup</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;optgroup</span> <span class="t-attr">label</span>=<span class="t-str">"Electrónica"</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"teleco"</span><span class="t-tag">&gt;</span>Sistemas de Telecomunicación<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"electronica"</span><span class="t-tag">&gt;</span>Electrónica<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;/optgroup</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;/select</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Select múltiple --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"lenguajes"</span><span class="t-tag">&gt;</span>Lenguajes favoritos:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;select</span> <span class="t-attr">name</span>=<span class="t-str">"lenguajes"</span> <span class="t-attr">id</span>=<span class="t-str">"lenguajes"</span> <span class="t-attr">multiple</span> <span class="t-attr">size</span>=<span class="t-str">"4"</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"html"</span><span class="t-tag">&gt;</span>HTML<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"css"</span><span class="t-tag">&gt;</span>CSS<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"javascript"</span><span class="t-tag">&gt;</span>JavaScript<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"java"</span><span class="t-tag">&gt;</span>Java<span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;/select</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/fieldset</span><span class="t-tag">&gt;</span>
+
+    <span class="t-tag">&lt;fieldset</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;legend</span><span class="t-tag">&gt;</span>Texto<span class="t-tag">&lt;/legend</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Texto --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"comentarios"</span><span class="t-tag">&gt;</span>Comentarios:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;textarea</span> <span class="t-attr">name</span>=<span class="t-str">"comentarios"</span> <span class="t-attr">id</span>=<span class="t-str">"comentarios"</span> <span class="t-attr">rows</span>=<span class="t-str">"5"</span> <span class="t-attr">cols</span>=<span class="t-str">"40"</span> <span class="t-attr">placeholder</span>=<span class="t-str">"Escribe aquí"</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;/textarea</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/fieldset</span><span class="t-tag">&gt;</span>
+
+    <span class="t-tag">&lt;fieldset</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;legend</span><span class="t-tag">&gt;</span>Otros elementos<span class="t-tag">&lt;/legend</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- File --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"archivo"</span><span class="t-tag">&gt;</span>Selecciona un archivo:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"file"</span> <span class="t-attr">name</span>=<span class="t-str">"archivo"</span> <span class="t-attr">id</span>=<span class="t-str">"archivo"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Datalist --&gt;</span>
+        <span class="t-tag">&lt;p</span> <span class="t-attr">class</span>=<span class="t-str">"campo"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;label</span> <span class="t-attr">for</span>=<span class="t-str">"navegador"</span><span class="t-tag">&gt;</span>Navegador favorito:<span class="t-tag">&lt;/label</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"text"</span> <span class="t-attr">name</span>=<span class="t-str">"navegador"</span> <span class="t-attr">id</span>=<span class="t-str">"navegador"</span> <span class="t-attr">list</span>=<span class="t-str">"navegadores"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;datalist</span> <span class="t-attr">id</span>=<span class="t-str">"navegadores"</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"Chrome"</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"Firefox"</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"Edge"</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;option</span> <span class="t-attr">value</span>=<span class="t-str">"Brave"</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;/option</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;/datalist</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Hidden --&gt;</span>
+        <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"hidden"</span> <span class="t-attr">name</span>=<span class="t-str">"id_usuario"</span> <span class="t-attr">value</span>=<span class="t-str">"123"</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/fieldset</span><span class="t-tag">&gt;</span>
+
+    <span class="t-tag">&lt;fieldset</span> <span class="t-attr">class</span>=<span class="t-str">"botones"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;legend</span><span class="t-tag">&gt;</span>Botones<span class="t-tag">&lt;/legend</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Submit --&gt;</span>
+        <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"submit"</span> <span class="t-attr">class</span>=<span class="t-str">"boton"</span> <span class="t-attr">value</span>=<span class="t-str">"Enviar formulario"</span><span class="t-tag">&gt;</span>
+        <span class="t-com">&lt;!-- Reset --&gt;</span>
+        <span class="t-tag">&lt;input</span> <span class="t-attr">type</span>=<span class="t-str">"reset"</span> <span class="t-attr">class</span>=<span class="t-str">"boton boton-secundario"</span> <span class="t-attr">value</span>=<span class="t-str">"Borrar formulario"</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/fieldset</span><span class="t-tag">&gt;</span>
+<span class="t-tag">&lt;/form</span><span class="t-tag">&gt;</span></code></pre><pre class="codigo-bloque" id="bloque-1" role="tabpanel" aria-labelledby="tab-1" hidden><code><span class="t-com">/* Formulario de contacto */</span><span class="t-sel">
+.formulario form </span>{
+    <span class="t-prop">display</span>: grid;
+    <span class="t-prop">gap</span>: <span class="t-num">1.25rem</span>;
+}<span class="t-sel">
+
+.formulario fieldset </span>{
+    <span class="t-prop">min-width</span>: <span class="t-num">0</span>;
+    <span class="t-prop">margin</span>: <span class="t-num">0</span>;
+    <span class="t-prop">padding</span>: <span class="t-num">.5rem</span> <span class="t-num">1.25rem</span> <span class="t-num">1.25rem</span>;
+    <span class="t-prop">background</span>: var(--tarjeta);
+    <span class="t-prop">border</span>: <span class="t-num">1px</span> solid var(--borde);
+    <span class="t-prop">border-radius</span>: var(--radio);
+}<span class="t-sel">
+
+.formulario legend </span>{
+    <span class="t-prop">padding</span>: <span class="t-num">0</span> <span class="t-num">.5rem</span>;
+    <span class="t-prop">font-weight</span>: <span class="t-num">650</span>;
+    <span class="t-prop">color</span>: var(--acento-oscuro);
+}<span class="t-sel">
+
+.formulario .campo </span>{
+    <span class="t-prop">display</span>: grid;
+    <span class="t-prop">gap</span>: <span class="t-num">.3rem</span>;
+    <span class="t-prop">margin</span>: <span class="t-num">.85rem</span> <span class="t-num">0</span> <span class="t-num">0</span>;
+}<span class="t-sel">
+
+.formulario label </span>{
+    <span class="t-prop">font-size</span>: <span class="t-num">.95rem</span>;
+    <span class="t-prop">font-weight</span>: <span class="t-num">500</span>;
+}<span class="t-sel">
+
+.formulario input:not([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="submit"], [type="reset"]),
+.formulario select,
+.formulario textarea </span>{
+    <span class="t-prop">width</span>: <span class="t-num">100%</span>;
+    <span class="t-prop">max-width</span>: <span class="t-num">28rem</span>;
+    <span class="t-prop">padding</span>: <span class="t-num">.5rem</span> <span class="t-num">.65rem</span>;
+    <span class="t-prop">font</span>: inherit;
+    <span class="t-prop">color</span>: var(--texto);
+    <span class="t-prop">background</span>: var(--superficie);
+    <span class="t-prop">border</span>: <span class="t-num">1px</span> solid var(--campo-borde);
+    <span class="t-prop">border-radius</span>: <span class="t-num">8px</span>;
+}<span class="t-sel">
+
+.formulario textarea </span>{
+    <span class="t-prop">resize</span>: vertical;
+}<span class="t-sel">
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus </span>{
+    <span class="t-prop">outline</span>: <span class="t-num">2px</span> solid var(--acento);
+    <span class="t-prop">outline-offset</span>: <span class="t-num">1px</span>;
+    <span class="t-prop">border-color</span>: var(--acento);
+}<span class="t-sel">
+
+.formulario input[type="range"] </span>{
+    <span class="t-prop">width</span>: <span class="t-num">100%</span>;
+    <span class="t-prop">max-width</span>: <span class="t-num">28rem</span>;
+    <span class="t-prop">accent-color</span>: var(--acento);
+}<span class="t-sel">
+
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] </span>{
+    <span class="t-prop">accent-color</span>: var(--acento);
+}<span class="t-sel">
+
+.formulario .titulo-grupo </span>{
+    <span class="t-prop">margin</span>: <span class="t-num">1rem</span> <span class="t-num">0</span> <span class="t-num">.25rem</span>;
+    <span class="t-prop">font-weight</span>: <span class="t-num">600</span>;
+}<span class="t-sel">
+
+.formulario .opcion </span>{
+    <span class="t-prop">display</span>: flex;
+    <span class="t-prop">align-items</span>: center;
+    <span class="t-prop">gap</span>: <span class="t-num">.5rem</span>;
+    <span class="t-prop">margin</span>: <span class="t-num">.2rem</span> <span class="t-num">0</span>;
+}<span class="t-sel">
+
+.formulario .botones </span>{
+    <span class="t-prop">display</span>: flex;
+    <span class="t-prop">flex-wrap</span>: wrap;
+    <span class="t-prop">gap</span>: <span class="t-num">.5rem</span>;
+    <span class="t-prop">padding-top</span>: <span class="t-num">1rem</span>;
+}</code></pre></div>
+        </aside>
     </body>
 </html>

@@ -1,0 +1,48 @@
+/* =========================================================
+   ejercicios.css · base común de las páginas de ejercicio
+   Solo fija lo que el ejercicio no define (márgenes, tipografía
+   por defecto, título superior). El estilo de cada ejercicio
+   sigue en su propio archivo.
+   ========================================================= */
+
+body.con-menu {
+    margin: 0;
+    color: #23242d;
+    font-family: var(--fuente);
+    background-color: #f3f4f8;
+}
+
+.ejercicio {
+    padding: 1rem 1.25rem 5rem;
+    overflow-x: auto; /* las medidas fijas del enunciado no ensanchan la página en el móvil */
+}
+
+/* Título superior (no es un <h1> ni un <p> para no heredar los estilos del ejercicio) */
+.hero-ej {
+    padding: 2rem 1rem 2.2rem;
+    text-align: center;
+    color: #fff;
+    font-family: var(--fuente);
+    background: linear-gradient(135deg, #1e1d27 0%, #2b2a4c 100%);
+}
+
+.hero-titulo {
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.2;
+    animation: entra .6s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.hero-texto {
+    max-width: 42rem;
+    margin: .5rem auto 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #c9cbe0;
+    animation: entra .6s .1s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+@keyframes entra {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: none; }
+}

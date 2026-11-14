@@ -4,50 +4,168 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicio 4</title>
+        <meta name="description" content="Ejercicio 4: Listas ordenadas y no ordenadas, anidadas en varios niveles.">
+        <meta name="theme-color" content="#1e1d27">
+        <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+        <script>if(self!==top)document.documentElement.classList.add("en-marco");try{var d=document.documentElement,t=localStorage.getItem("tema");d.dataset.tema=t||(matchMedia("(prefers-color-scheme: dark)").matches?"oscuro":"claro")}catch(e){}</script>
+        <link rel="stylesheet" href="../css/menu.css">
+        <link rel="stylesheet" href="../css/ejercicios.css">
         <link rel="stylesheet" href="../css/estilo_ejercicio4.css">
-        <link rel="stylesheet" href="../css/sitio-compartido.css">
-        <script src="../js/portafolio.js" defer></script>
+        <script src="../js/menu.js" defer></script>
+        <link rel="stylesheet" href="../css/codigo.css">
+        <script src="../js/codigo.js" defer></script>
     </head>
-    <body class="sitio" data-theme="dark">
-        <p><strong>lista no ordenada</strong></p>
+    <body class="con-menu">
+        <header class="barra">
+            <a class="marca" href="../index.html">Lenguaje de Marcas</a>
+            <nav class="menu" id="menu-principal" aria-label="Principal">
+                <a href="../index.html">Inicio</a>
+                <a href="temas.html">Temas</a>
+                <a href="horario.html">Horario</a>
+                <a href="formulario.html">Formulario</a>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton" aria-expanded="false" aria-haspopup="true">JS</button>
+                    <div class="submenu">
+                        <a href="inicio_js.html" style="--i:0">Inicio JS</a>
+                        <a href="calculadora.html" style="--i:1">Calculadora</a>
+                        <a href="juego.html" style="--i:2">Piedra, papel o tijera</a>
+                    </div>
+                </div>
+                <div class="desplegable">
+                    <button type="button" class="menu-boton activo" aria-expanded="false" aria-haspopup="true">Actividades complementarias</button>
+                    <div class="submenu">
+                        <a href="actividades.html" style="--i:0">Todas las actividades</a>
+                        <a href="ejercicio1.html" style="--i:1">Ejercicio 1</a>
+                        <a href="ejercicio2.html" style="--i:2">Ejercicio 2</a>
+                        <a href="ejercicio3.html" style="--i:3">Ejercicio 3</a>
+                        <a href="ejercicio4.html" aria-current="page" style="--i:4">Ejercicio 4</a>
+                        <a href="ejercicio5.html" style="--i:5">Ejercicio 5</a>
+                        <a href="ejercicio6.html" style="--i:6">Ejercicio 6</a>
+                        <a href="ejercicio7.html" style="--i:7">Ejercicio 7</a>
+                        <a href="ejercicio8.html" style="--i:8">Ejercicio 8</a>
+                        <a href="ejercicio9_pagina1.html" style="--i:9">Ejercicio 9</a>
+                    </div>
+                </div>
+                <span class="indicador" aria-hidden="true"></span>
+            </nav>
+            <button type="button" class="tema-toggle" aria-pressed="false" aria-label="Cambiar a modo oscuro"><svg class="icono-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icono-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+        </header>
 
-        <ul style="list-style-type: circle;">
-            <li>opcion 1</li>
-            <li>opcion 2
-                <ul style="list-style-type: square;">
-                    <li>opcion 21</li>
-                    <li>opcion 22</li>
-                </ul>
-            </li>
-            <li>opcion 3</li>
-            <li>opcion 4</li>
-            <li>opcion 5</li>
-        </ul>
-        <hr>
-        <p><strong>lista ordenada</strong></p>
+        <div class="hero-ej">
+            <div class="hero-titulo">Ejercicio 4</div>
+            <div class="hero-texto">Listas ordenadas y no ordenadas, anidadas en varios niveles.</div>
+        </div>
 
-        <ol>
-            <li>opcion 1</li>
-            <li>opcion 2
-                <ul style="list-style-type: square;">
-                    <li>opcion 21</li>
-                    <li>opcion 22</li>
-                </ul>
-            </li>
-            <li>opcion 3</li>
-            <li>opcion 4
-                <ol type="a">
-                    <li>opcion 41
-                        <ol type="i">
-                            <li>opcion 411</li>
-                            <li>opcion 412</li>
-                        </ol>
-                    </li>
-                    <li>opcion 42</li>
-                </ol>
-            </li>
-            <li>opcion 5</li>
-        </ol>
-        <hr>
+        <div class="ejercicio">
+            <p><strong>lista no ordenada</strong></p>
+
+            <ul style="list-style-type: circle;">
+                <li>opcion 1</li>
+                <li>opcion 2
+                    <ul style="list-style-type: square;">
+                        <li>opcion 21</li>
+                        <li>opcion 22</li>
+                    </ul>
+                </li>
+                <li>opcion 3</li>
+                <li>opcion 4</li>
+                <li>opcion 5</li>
+            </ul>
+            <hr>
+            <p><strong>lista ordenada</strong></p>
+
+            <ol>
+                <li>opcion 1</li>
+                <li>opcion 2
+                    <ul style="list-style-type: square;">
+                        <li>opcion 21</li>
+                        <li>opcion 22</li>
+                    </ul>
+                </li>
+                <li>opcion 3</li>
+                <li>opcion 4
+                    <ol type="a">
+                        <li>opcion 41
+                            <ol type="i">
+                                <li>opcion 411</li>
+                                <li>opcion 412</li>
+                            </ol>
+                        </li>
+                        <li>opcion 42</li>
+                    </ol>
+                </li>
+                <li>opcion 5</li>
+            </ol>
+            <hr>
+        </div>
+        <button type="button" class="codigo-abrir" aria-controls="codigo-panel" aria-expanded="false"><span class="codigo-icono" aria-hidden="true">&lt;/&gt;</span> Ver código</button>
+        <div class="codigo-fondo"></div>
+        <aside class="codigo-panel" id="codigo-panel" role="dialog" aria-label="Código de esta página">
+            <div class="codigo-cab">
+                <div class="codigo-tabs" role="tablist"><button type="button" role="tab" id="tab-0" aria-controls="bloque-0" aria-selected="true" tabindex="0">HTML</button><button type="button" role="tab" id="tab-1" aria-controls="bloque-1" aria-selected="false" tabindex="-1">estilo_ejercicio4.css</button></div>
+                <button type="button" class="codigo-copiar">Copiar</button>
+                <button type="button" class="codigo-cerrar" aria-label="Cerrar">×</button>
+            </div>
+            <div class="codigo-cuerpo"><pre class="codigo-bloque" id="bloque-0" role="tabpanel" aria-labelledby="tab-0"><code><span class="t-com">&lt;!DOCTYPE html&gt;</span>
+<span class="t-tag">&lt;html</span> <span class="t-attr">lang</span>=<span class="t-str">"es"</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;head</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;meta</span> <span class="t-attr">charset</span>=<span class="t-str">"UTF-8"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;meta</span> <span class="t-attr">name</span>=<span class="t-str">"viewport"</span> <span class="t-attr">content</span>=<span class="t-str">"width=device-width, initial-scale=1.0"</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;title</span><span class="t-tag">&gt;</span>Ejercicio 4<span class="t-tag">&lt;/title</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;link</span> <span class="t-attr">rel</span>=<span class="t-str">"stylesheet"</span> <span class="t-attr">href</span>=<span class="t-str">"../css/estilo_ejercicio4.css"</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/head</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;body</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;p</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;strong</span><span class="t-tag">&gt;</span>lista no ordenada<span class="t-tag">&lt;/strong</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+
+        <span class="t-tag">&lt;ul</span> <span class="t-attr">style</span>=<span class="t-str">"list-style-type: circle;"</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 1<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 2
+                <span class="t-tag">&lt;ul</span> <span class="t-attr">style</span>=<span class="t-str">"list-style-type: square;"</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 21<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 22<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;/ul</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 3<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 4<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 5<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/ul</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;hr</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;p</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;strong</span><span class="t-tag">&gt;</span>lista ordenada<span class="t-tag">&lt;/strong</span><span class="t-tag">&gt;</span><span class="t-tag">&lt;/p</span><span class="t-tag">&gt;</span>
+
+        <span class="t-tag">&lt;ol</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 1<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 2
+                <span class="t-tag">&lt;ul</span> <span class="t-attr">style</span>=<span class="t-str">"list-style-type: square;"</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 21<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 22<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;/ul</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 3<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 4
+                <span class="t-tag">&lt;ol</span> <span class="t-attr">type</span>=<span class="t-str">"a"</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 41
+                        <span class="t-tag">&lt;ol</span> <span class="t-attr">type</span>=<span class="t-str">"i"</span><span class="t-tag">&gt;</span>
+                            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 411<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+                            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 412<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+                        <span class="t-tag">&lt;/ol</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+                    <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 42<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+                <span class="t-tag">&lt;/ol</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+            <span class="t-tag">&lt;li</span><span class="t-tag">&gt;</span>opcion 5<span class="t-tag">&lt;/li</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;/ol</span><span class="t-tag">&gt;</span>
+        <span class="t-tag">&lt;hr</span><span class="t-tag">&gt;</span>
+    <span class="t-tag">&lt;/body</span><span class="t-tag">&gt;</span>
+<span class="t-tag">&lt;/html</span><span class="t-tag">&gt;</span></code></pre><pre class="codigo-bloque" id="bloque-1" role="tabpanel" aria-labelledby="tab-1" hidden><code><span class="t-sel">p </span>{
+    <span class="t-prop">margin</span>: <span class="t-num">0</span>;
+    <span class="t-prop">padding</span>: <span class="t-num">10px</span>;
+    <span class="t-prop">border-radius</span>: <span class="t-num">10px</span>;
+    <span class="t-prop">text-align</span>: center;
+    <span class="t-prop">background-color</span>: aqua;
+    <span class="t-prop">font-size</span>: <span class="t-num">15px</span>;
+    <span class="t-prop">font-family</span>: <span class="t-str">'Franklin Gothic Medium'</span>, <span class="t-str">'Arial Narrow'</span>, Arial, sans-serif
+}</code></pre></div>
+        </aside>
     </body>
 </html>

@@ -1,0 +1,451 @@
+/* =========================================================
+   menu.css · variables y barra de navegación
+   Se carga en todas las páginas (también en los ejercicios),
+   por eso aísla sus estilos para que no los alteren las
+   reglas propias de cada ejercicio.
+   ========================================================= */
+
+:root {
+    --tinta: #1e1d27;          /* cabecera y pie */
+    --papel: #f3f4f8;          /* fondo de la página */
+    --tarjeta: #ffffff;
+    --texto: #23242d;
+    --texto-suave: #5b5e70;
+    --borde: #dcdfe8;
+    --acento: #3f5bd8;
+    --acento-oscuro: #2f47b5;
+    --boton: #3f5bd8;
+    --boton-hover: #2f47b5;
+    --superficie: #ffffff;
+    --superficie-2: #eef0fb;
+    --superficie-3: #e3e7fb;
+    --campo-borde: #c4c8d6;
+    --celda: #e3e6f3;
+    --celda-2: #eceef6;
+    --radio: 10px;
+    --fuente: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+}
+
+/* Modo oscuro (interruptor de la barra o preferencia del sistema) */
+html[data-tema="oscuro"] {
+    --papel: #13131b;
+    --tarjeta: #1c1c27;
+    --texto: #e7e8f1;
+    --texto-suave: #a3a6ba;
+    --borde: #32334a;
+    --acento: #8fa2ff;
+    --acento-oscuro: #a9b8ff;
+    --superficie: #1c1c27;
+    --superficie-2: #2a2b42;
+    --superficie-3: #34365c;
+    --campo-borde: #4a4c68;
+    --celda: #2a2b42;
+    --celda-2: #232436;
+    color-scheme: dark;
+}
+
+/* ---------- Aislamiento (para los ejercicios) ---------- */
+.barra,
+.barra *,
+.barra *::before,
+.barra *::after {
+    box-sizing: border-box;
+}
+
+.barra {
+    font: 400 1rem/1.5 var(--fuente);
+}
+
+.barra :focus-visible {
+    outline: 3px solid #8fa2ff;
+    outline-offset: 2px;
+}
+
+/* ---------- Barra de navegación ---------- */
+.barra {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .55rem 1.25rem;
+    background: rgba(30, 29, 39, .92);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: box-shadow .25s;
+}
+
+.barra.con-sombra {
+    box-shadow: 0 6px 20px rgba(14, 13, 22, .35);
+}
+
+.marca {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    border: 0;
+}
+
+.marca::before {
+    content: "</>";
+    padding: .2rem .45rem;
+    font: 700 .8rem ui-monospace, "SFMono-Regular", Consolas, monospace;
+    color: #aebaff;
+    background: rgba(143, 162, 255, .16);
+    border-radius: 6px;
+    transition: transform .3s cubic-bezier(.3, 1.6, .5, 1), background-color .3s;
+}
+
+.marca:hover::before {
+    background: rgba(143, 162, 255, .32);
+    transform: rotate(-8deg) scale(1.1);
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .15rem;
+}
+
+.menu > a,
+.menu .menu-boton {
+    position: relative;
+    z-index: 1;
+    padding: .5rem 1rem;
+    font: inherit;
+    font-size: .95rem;
+    color: #c9cbe0;
+    text-decoration: none;
+    background: none;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.menu > a:hover,
+.menu .menu-boton:hover,
+.menu > a[aria-current="page"],
+.menu .menu-boton.activo,
+.desplegable.abierto > .menu-boton {
+    color: #fff;
+}
+
+.menu > a[aria-current="page"],
+.menu .menu-boton.activo {
+    font-weight: 650;
+}
+
+/* Píldora que se desliza hasta la opción señalada */
+.indicador {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--w, 0);
+    background: rgba(143, 162, 255, .22);
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(var(--x, 0));
+    transition: transform .4s cubic-bezier(.3, 1.35, .5, 1), width .4s cubic-bezier(.3, 1.35, .5, 1), opacity .2s;
+}
+
+.indicador.visible {
+    opacity: 1;
+}
+
+.menu-boton::after {
+    content: "";
+    display: inline-block;
+    width: .4rem;
+    height: .4rem;
+    margin-left: .55rem;
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    transform: translateY(-3px) rotate(45deg);
+    transition: transform .25s;
+}
+
+.desplegable:hover > .menu-boton::after,
+.desplegable.abierto > .menu-boton::after {
+    transform: translateY(0) rotate(225deg);
+}
+
+/* Submenús */
+.desplegable {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 20;
+    min-width: 14rem;
+    padding: .4rem;
+    text-align: left;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    box-shadow: 0 14px 34px rgba(30, 29, 39, .28);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px) scale(.97);
+    transform-origin: top left;
+    transition: opacity .2s, transform .28s cubic-bezier(.2, .9, .3, 1.2), visibility 0s .28s;
+}
+
+/* Puente invisible para que no se cierre al cruzar el hueco */
+.submenu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.desplegable:hover .submenu,
+.desplegable.abierto .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition-delay: 0s;
+}
+
+.menu .submenu a {
+    display: block;
+    padding: .45rem .75rem;
+    color: var(--texto);
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity .25s calc(var(--i, 0) * 30ms), transform .25s calc(var(--i, 0) * 30ms),
+                background-color .15s, padding-left .15s;
+}
+
+.desplegable:hover .submenu a,
+.desplegable.abierto .submenu a {
+    opacity: 1;
+    transform: none;
+}
+
+.menu .submenu a:hover {
+    padding-left: 1rem;
+    background: var(--superficie-2);
+}
+
+.menu .submenu a[aria-current="page"] {
+    font-weight: 600;
+    color: var(--acento-oscuro);
+    background: var(--superficie-3);
+}
+
+/* Botón hamburguesa (solo en pantallas pequeñas) */
+.menu-toggle {
+    display: none;
+    position: relative;
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: 0;
+    background: rgba(255, 255, 255, .08);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    position: absolute;
+    left: .7rem;
+    right: .7rem;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: top .3s, transform .3s, opacity .2s;
+}
+
+.menu-toggle span:nth-child(1) { top: .9rem; }
+.menu-toggle span:nth-child(2) { top: 1.25rem; }
+.menu-toggle span:nth-child(3) { top: 1.6rem; }
+
+.barra.abierta .menu-toggle span:nth-child(1) { top: 1.25rem; transform: rotate(45deg); }
+.barra.abierta .menu-toggle span:nth-child(2) { opacity: 0; }
+.barra.abierta .menu-toggle span:nth-child(3) { top: 1.25rem; transform: rotate(-45deg); }
+
+@keyframes despliega {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (max-width: 64rem) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .indicador {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        max-height: calc(100vh - 3.6rem);
+        padding: .5rem 1rem 1rem;
+        overflow-y: auto;
+        background: #1e1d27;
+        border-top: 1px solid rgba(255, 255, 255, .08);
+        box-shadow: 0 18px 30px rgba(14, 13, 22, .4);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity .25s, transform .3s, visibility 0s .3s;
+    }
+
+    .barra.abierta .menu {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition-delay: 0s;
+    }
+
+    .menu > a,
+    .menu .menu-boton {
+        width: 100%;
+        padding: .7rem .6rem;
+        text-align: left;
+        border-radius: 8px;
+    }
+
+    .menu > a[aria-current="page"],
+    .menu .menu-boton.activo {
+        background: rgba(143, 162, 255, .18);
+    }
+
+    .desplegable {
+        position: static;
+    }
+
+    .menu-boton::after {
+        float: right;
+        margin-top: .35rem;
+    }
+
+    .submenu,
+    .desplegable:hover .submenu {
+        position: static;
+        display: none;
+        min-width: 0;
+        padding: 0 0 .25rem 1rem;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .submenu::before {
+        display: none;
+    }
+
+    .desplegable.abierto .submenu {
+        display: block;
+        animation: despliega .25s ease-out;
+    }
+
+    .menu .submenu a {
+        color: #c9cbe0;
+        opacity: 1;
+        transform: none;
+    }
+
+    .menu .submenu a:hover {
+        padding-left: .75rem;
+        color: #fff;
+        background: rgba(255, 255, 255, .08);
+    }
+
+    .menu .submenu a[aria-current="page"] {
+        color: #fff;
+        background: rgba(143, 162, 255, .18);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .barra, .barra *, .barra *::before, .barra *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* ---------- Interruptor de modo oscuro ---------- */
+.tema-toggle {
+    display: grid;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0;
+    color: #c9cbe0;
+    background: rgba(255, 255, 255, .08);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .2s, color .2s, transform .3s;
+}
+
+.tema-toggle:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .16);
+    transform: rotate(18deg);
+}
+
+.tema-toggle svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.tema-toggle .icono-sol,
+html[data-tema="oscuro"] .tema-toggle .icono-luna {
+    display: none;
+}
+
+html[data-tema="oscuro"] .tema-toggle .icono-sol {
+    display: block;
+}
+
+@media (max-width: 64rem) {
+    .tema-toggle { order: 2; }
+    .menu-toggle { order: 3; }
+}
+
+/* Página mostrada dentro de un <iframe> (ejercicio 8): sin barra ni título */
+.en-marco .barra,
+.en-marco .hero-ej,
+.en-marco .cabecera,
+.en-marco .codigo-abrir {
+    display: none;
+}

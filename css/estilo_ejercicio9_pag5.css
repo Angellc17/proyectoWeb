@@ -18,3 +18,10 @@
      font-size: 32px;
      margin: 0;
  }
+/* En pantallas estrechas el cuadro se ajusta al ancho disponible */
+@media (max-width: 30rem) {
+    dialog {
+        box-sizing: border-box;
+        max-width: calc(100% - 2rem);
+    }
+}

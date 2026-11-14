@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="hero" x2="1" y2="1">
+      <stop stop-color="#1e1d27"/>
+      <stop offset="1" stop-color="#34345a"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#171626" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="640" height="400" fill="#f3f4f8"/>
+  <rect width="640" height="36" fill="#1e1d27"/>
+  <rect x="22" y="12" width="13" height="13" rx="4" fill="#8fa2ff"/>
+  <rect x="42" y="15" width="110" height="6" rx="3" fill="#e7e8f1" opacity=".9"/>
+  <rect y="36" width="640" height="88" fill="url(#hero)"/>
+  <text x="320" y="78" fill="#fff" font-family="system-ui, sans-serif" font-size="25" font-weight="700" text-anchor="middle">Tu espacio para contar</text>
+  <text x="320" y="101" fill="#c9cbe0" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Explora los campos de HTML y personaliza tu formulario</text>
+  <text x="35" y="153" fill="#23242d" font-family="system-ui, sans-serif" font-size="17" font-weight="700">Un formulario, muchos campos</text>
+  <text x="35" y="171" fill="#5b5e70" font-family="system-ui, sans-serif" font-size="10">Datos personales, fechas, preferencias y mucho más.</text>
+  <g filter="url(#shadow)">
+    <rect x="30" y="184" width="580" height="192" rx="14" fill="#fff" stroke="#dcdfe8"/>
+    <rect x="45" y="199" width="550" height="28" rx="4" fill="none" stroke="#dcdfe8"/>
+    <rect x="57" y="194" width="110" height="12" fill="#fff"/>
+    <circle cx="63" cy="200" r="3" fill="#3f5bd8"/>
+    <text x="72" y="204" fill="#23242d" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Datos de contacto</text>
+  </g>
+  <g font-family="system-ui, sans-serif">
+    <g fill="#373846" font-size="9" font-weight="600">
+      <text x="55" y="245">Nombre</text><text x="333" y="245">Apellido</text>
+      <text x="55" y="292">Correo electrónico</text><text x="333" y="292">Teléfono</text>
+      <text x="55" y="339">Sitio web</text><text x="333" y="339">Buscar</text>
+    </g>
+    <g fill="#f3f4f8" stroke="#c4c8d6">
+      <rect x="55" y="251" width="250" height="28" rx="7"/><rect x="333" y="251" width="250" height="28" rx="7"/>
+      <rect x="55" y="298" width="250" height="28" rx="7"/><rect x="333" y="298" width="250" height="28" rx="7"/>
+      <rect x="55" y="345" width="250" height="20" rx="7"/><rect x="333" y="345" width="250" height="20" rx="7"/>
+    </g>
+    <g fill="#85879a" font-size="9">
+      <text x="66" y="269">Escribe tu nombre</text><text x="344" y="269">Escribe tu apellido</text>
+      <text x="66" y="316">Escribe tu correo</text><text x="344" y="316">Escribe tu teléfono</text>
+      <text x="66" y="359">https://</text><text x="344" y="359">Buscar</text>
+    </g>
+    <rect x="45" y="372" width="550" height="1" fill="#dcdfe8"/>
+  </g>
+</svg>
