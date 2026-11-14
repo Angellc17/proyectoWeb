@@ -3,18 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Web de Ejemplo</title>
-        <meta name="description" content="Portafolio de las clases de Lenguaje de Marcas: ejercicios de HTML, CSS y JavaScript.">
+        <title>Mi portafolio | Desarrollo web</title>
+        <meta name="description" content="Portafolio de aprendizaje con proyectos y prácticas de HTML, CSS y JavaScript.">
         <meta name="theme-color" content="#1e1d27">
         <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
         <script>if(self!==top)document.documentElement.classList.add("en-marco");try{var d=document.documentElement,t=localStorage.getItem("tema");d.dataset.tema=t||(matchMedia("(prefers-color-scheme: dark)").matches?"oscuro":"claro")}catch(e){}</script>
         <link rel="stylesheet" href="css/menu.css">
         <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/portada.css">
         <script src="js/menu.js" defer></script>
     </head>
     <body class="sitio">
         <header class="barra">
-            <a class="marca" href="index.html">Lenguaje de Marcas</a>
+            <a class="marca" href="index.html">Mi portafolio</a>
             <nav class="menu" id="menu-principal" aria-label="Principal">
                 <a href="index.html" aria-current="page">Inicio</a>
                 <a href="html/temas.html">Temas</a>
@@ -49,64 +50,96 @@
             <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú"><span></span><span></span><span></span></button>
         </header>
 
-        <div class="cabecera">
-            <h1>Esta es mi primera WEB</h1>
-        </div>
+        <main class="portada">
+            <section class="presentacion" aria-labelledby="titulo-portada">
+                <div class="presentacion-texto">
+                    <p class="sobrelinea"><span aria-hidden="true"></span> Portafolio de aprendizaje</p>
+                    <h1 id="titulo-portada">Aprendiendo a crear experiencias para la web.</h1>
+                    <p class="presentacion-resumen">Soy estudiante de Desarrollo de Aplicaciones Multiplataforma y aquí reúno proyectos y ejercicios con los que practico HTML, CSS y JavaScript.</p>
+                    <div class="presentacion-acciones">
+                        <a class="accion accion-principal" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
+                    </div>
+                </div>
+                <div class="presentacion-visual" aria-hidden="true">
+                    <div class="codigo-ventana">
+                        <div class="codigo-puntos"><i></i><i></i><i></i><span>mi-proyecto</span></div>
+                        <pre><code><span class="codigo-etiqueta">&lt;h1&gt;</span>
+  Hola, mundo<span class="codigo-etiqueta">&lt;/h1&gt;</span>
 
-        <main class="contenido">
-            <h2>Hola mundo!</h2>
-            <p>Esto es un párrafo</p>
-            <ul class="materias">
-                <li>Programación</li>
-                <li>BBDD</li>
-                <li>LLMM</li>
-                <li>Entornos</li>
-                <li>IPE</li>
-            </ul>
+<span class="codigo-clave">const</span> ideas = [
+  <span class="codigo-texto">"diseño"</span>,
+  <span class="codigo-texto">"código"</span>,
+  <span class="codigo-texto">"creatividad"</span>
+];</code></pre>
+                        <span class="codigo-sello">HTML · CSS · JS</span>
+                    </div>
+                </div>
+            </section>
 
-            <h2>Imagen de Ejercicio</h2>
-            <figure class="figura">
-                <img src="img/imagen_inicio.png" alt="Imagen del ejercicio" width="1388" height="589">
-            </figure>
+            <section class="seccion-portada proyectos" id="proyectos" aria-labelledby="titulo-proyectos">
+                <div class="encabezado-seccion">
+                    <div>
+                        <p class="sobrelinea">Una selección de prácticas</p>
+                        <h2 id="titulo-proyectos">Proyectos destacados</h2>
+                    </div>
+                    <a class="enlace-seccion" href="html/actividades.html">Ver todas las actividades <span aria-hidden="true">→</span></a>
+                </div>
+                <ul class="rejilla-proyectos">
+                    <li>
+                        <a class="proyecto" href="html/ejercicio9_pagina1.html">
+                            <span class="proyecto-imagen"><img src="img/miniaturas/ejercicio9_pagina1.jpg" alt="" width="640" height="400" loading="lazy"></span>
+                            <span class="proyecto-cuerpo">
+                                <span class="proyecto-tipo">HTML · CSS</span>
+                                <span class="proyecto-titulo">Sitio de varias páginas</span>
+                                <span class="proyecto-descripcion">Un conjunto de páginas conectadas con formularios, contenido multimedia y navegación.</span>
+                                <span class="proyecto-abrir">Explorar proyecto <span aria-hidden="true">↗</span></span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="proyecto" href="html/calculadora.html">
+                            <span class="proyecto-imagen"><img src="img/miniaturas/calculadora.svg" alt="" width="640" height="400" loading="lazy"></span>
+                            <span class="proyecto-cuerpo">
+                                <span class="proyecto-tipo">JavaScript</span>
+                                <span class="proyecto-titulo">Calculadora interactiva</span>
+                                <span class="proyecto-descripcion">Operaciones, teclado e historial para practicar la lógica y la interacción.</span>
+                                <span class="proyecto-abrir">Probar proyecto <span aria-hidden="true">↗</span></span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="proyecto" href="html/juego.html">
+                            <span class="proyecto-imagen"><img src="img/miniaturas/juego.svg" alt="" width="640" height="400" loading="lazy"></span>
+                            <span class="proyecto-cuerpo">
+                                <span class="proyecto-tipo">JavaScript</span>
+                                <span class="proyecto-titulo">Piedra, papel o tijera</span>
+                                <span class="proyecto-descripcion">Un juego contra la máquina con marcador y resultados dinámicos.</span>
+                                <span class="proyecto-abrir">Jugar ahora <span aria-hidden="true">↗</span></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
 
-            <h2>Secciones de la web</h2>
-            <ul class="indice">
-                <li>
-                    <a href="html/temas.html">
-                        <span class="titulo">Temas</span>
-                        <span class="detalle">Qué se practica en HTML, CSS y JavaScript, y dónde verlo</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="html/actividades.html">
-                        <span class="titulo">Actividades</span>
-                        <span class="detalle">Todos los ejercicios con vista previa y su código</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="html/horario.html">
-                        <span class="titulo">Horario</span>
-                        <span class="detalle">Horario semanal de DAM1</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="html/formulario.html">
-                        <span class="titulo">Formulario</span>
-                        <span class="detalle">Formulario con los distintos tipos de campo de HTML</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="html/inicio_js.html">
-                        <span class="titulo">JavaScript</span>
-                        <span class="detalle">Calculadora, piedra papel o tijera y otras prácticas</span>
-                    </a>
-                </li>
-            </ul>
+            <section class="sobre-mi" id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+                <div class="sobre-mi-icono" aria-hidden="true">&lt;/&gt;</div>
+                <div>
+                    <p class="sobrelinea">Un poco sobre mí</p>
+                    <h2 id="titulo-sobre-mi">Aprender haciendo</h2>
+                    <p>Estoy formándome en desarrollo de aplicaciones y este portafolio recoge mi proceso: desde las primeras estructuras HTML hasta páginas con estilos propios e interacciones en JavaScript. Sigo practicando y ampliando cada proyecto.</p>
+                    <ul class="materias" aria-label="Tecnologías que estoy aprendiendo">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Diseño adaptable</li>
+                    </ul>
+                </div>
+            </section>
         </main>
 
         <footer class="pie">
-            <p>CIFP Virgen de Gracia</p>
-            <p>Contacto: <a href="mailto:correodeprueba@gmail.com">correodeprueba@gmail.com</a></p>
+            <p class="pie-titulo">Gracias por visitar mi portafolio</p>
+            <p>Estudiante de DAM · CIFP Virgen de Gracia</p>
         </footer>
     </body>
 </html>

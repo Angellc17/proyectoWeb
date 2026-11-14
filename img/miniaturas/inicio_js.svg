@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" rx="18" fill="#22213A"/>
+  <circle cx="42" cy="38" r="8" fill="#FF7777"/>
+  <circle cx="70" cy="38" r="8" fill="#FFD166"/>
+  <circle cx="98" cy="38" r="8" fill="#69D6A5"/>
+  <rect x="28" y="67" width="584" height="1" fill="#45445D"/>
+  <rect x="44" y="104" width="104" height="15" rx="7.5" fill="#8FA2FF" fill-opacity=".2"/>
+  <text x="44" y="115" fill="#C5CEFF" font-family="monospace" font-size="12">JAVASCRIPT</text>
+  <text x="44" y="170" fill="#D0A6FF" font-family="monospace" font-size="22">const</text>
+  <text x="112" y="170" fill="#E8E8F4" font-family="monospace" font-size="22">saludo =</text>
+  <text x="44" y="207" fill="#A7E6BF" font-family="monospace" font-size="22">"Hola, mundo";</text>
+  <text x="44" y="272" fill="#90B4FF" font-family="monospace" font-size="20">console</text>
+  <text x="136" y="272" fill="#E8E8F4" font-family="monospace" font-size="20">.log(saludo);</text>
+  <rect x="44" y="316" width="552" height="1" fill="#45445D"/>
+  <text x="44" y="351" fill="#A4A4B9" font-family="monospace" font-size="14">Practicar · probar · aprender</text>
+</svg>
